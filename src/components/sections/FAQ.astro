@@ -1,0 +1,47 @@
+---
+import { faqs } from '../../data/content';
+---
+
+<section id="faq" class="py-20 md:py-28 relative">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-semibold mb-3">
+        <span>Tanya Jawab Seputar Layanan</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Pertanyaan yang Sering Diajukan Pemilik Bisnis
+      </h2>
+      <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
+        Kami transparan dalam setiap aspek pengerjaan. Temukan jawaban atas hal-hal penting sebelum Anda memutuskan bermitra dengan Veridion Studio.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4">
+      {faqs.map((item, index) => (
+        <details class="group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 transition-all duration-200 shadow-sm open:border-emerald-500/50 open:shadow-md">
+          <summary class="flex items-center justify-between cursor-pointer list-none select-none font-bold text-slate-900 dark:text-white group-open:text-emerald-600 dark:group-open:text-emerald-400 text-base sm:text-lg">
+            <span class="pr-6">{item.q}</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-200 text-slate-500 dark:text-slate-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p>{item.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Contact Fallback -->
+    <div class="mt-12 text-center text-xs text-slate-500">
+      <span>Punya pertanyaan lain yang belum terjawab?</span>
+      <a href="https://wa.me/6281234567890" target="_blank" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline ml-1">
+        Tanyakan langsung via WhatsApp →
+      </a>
+    </div>
+
+  </div>
+</section>

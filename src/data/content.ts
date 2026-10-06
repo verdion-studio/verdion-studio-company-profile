@@ -158,4 +158,28 @@ export const workingSteps = [
   }
 ];
 
+export const faqs = [
+  {
+    q: 'Apakah sistem kasir (POS) Veridion bisa dijalankan di HP Android atau tablet biasa?',
+    a: 'Sangat bisa. Sistem kami dibangun dengan prinsip responsive dan mobile-first. Anda tidak wajib membeli mesin kasir POS berharga mahal; tablet Android standar, iPad, atau bahkan smartphone yang sudah Anda miliki bisa langsung difungsikan sebagai terminal kasir.'
+  },
+  {
+    q: 'Bagaimana jika koneksi internet di cafe atau toko saya tiba-tiba terputus?',
+    a: 'Kami merancang sistem dengan kapabilitas Offline-Ready (PWA / local caching). Staf kasir Anda tetap dapat menginput pesanan dan mencetak struk belanja. Begitu internet kembali stabil, data penjualan akan tersinkronisasi secara otomatis.'
+  },
+  {
+    q: 'Apa saja syarat untuk mendapatkan slot 100% Gratis di Early Partner Program?',
+    a: 'Program ini dibuka untuk 3 pemilik bisnis (UMKM, Cafe/Resto, Apotek, atau Hotel) yang sudah aktif beroperasi dan siap berkomitmen memberikan feedback langsung. Kami membebaskan 100% biaya jasa pengerjaan aplikasi, dengan timbal balik kesediaan menjadi studi kasus resmi Veridion Studio.'
+  },
+  {
+    q: 'Apakah ada biaya langganan bulanan tersembunyi setelah aplikasi selesai?',
+    a: 'Tidak ada biaya langganan tersembunyi. Software yang kami bangun adalah solusi kustom untuk bisnis Anda. Anda hanya perlu menyiapkan biaya perpanjangan domain atau hosting pihak ketiga (jika menggunakan nama domain pribadi).'
+  },
+  {
+    q: 'Bagaimana jika kami menemukan bug atau ada kendala teknis setelah aplikasi berjalan?',
+    a: 'Setiap proyek yang kami selesaikan disertai dengan Garansi Pendampingan Teknis. Anda dapat menghubungi lead developer kami langsung via WhatsApp untuk penanganan cepat tanpa birokrasi berbelit-belit.'
+  }
+];
+
+
 
