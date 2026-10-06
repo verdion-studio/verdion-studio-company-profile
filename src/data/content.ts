@@ -35,6 +35,12 @@ export const portfolioData: PortfolioItem[] = [
   }
 ];
 
+export const portfolioLinks = {
+  webLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
+  posAccessType: 'Private Enterprise Repository (NDA Protected)',
+  posNotice: 'Sistem POS berjalan pada private corporate environment dengan pengamanan data internal. Untuk melihat live demo walkthrough atau presentasi arsitektur modul kasirnya, calon mitra dapat mengajukan sesi konsultasi eksklusif.'
+};
+
 export interface IndustrySolution {
   id: string;
   name: string;
