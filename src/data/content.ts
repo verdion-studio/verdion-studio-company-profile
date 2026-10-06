@@ -9,9 +9,34 @@ export interface PortfolioItem {
   tags: string[];
   metrics: { label: string; value: string }[];
   activeStatus: string;
+  liveUrl?: string;
+  isInteractiveDemo?: boolean;
 }
 
 export const portfolioData: PortfolioItem[] = [
+  {
+    id: 'coffee-stand-pos',
+    title: 'Smart Coffee Stand POS & Barista Ordering System',
+    client: 'Veridion Showcase / F&B Stand Kopi',
+    category: 'Cafe & F&B Point of Sale',
+    impact: 'Memangkas antrean pesanan hingga 4 sentuhan layar dan otomatisasi kalkulasi kembalian tunai.',
+    description: 'Sistem kasir cerdas khusus kedai & stand kopi mandiri. Dilengkapi modul kustomisasi minuman barista (suhu, sugar level, ekstra espresso), integrasi QRIS, dan pencetakan struk kasir thermal 58mm.',
+    features: [
+      'Menu Barista Cepat (Espresso, Latte, Manual Brew, Pastry)',
+      'Modifier Minuman (Ice/Hot, Level Gula, Add-on Topping)',
+      'Checkout Kilat: Pecahan Uang Tunai Otomatis & QRIS Digital',
+      'Simulasi Cetak Struk Kasir Thermal 58mm & Rekap Omzet Harian'
+    ],
+    tags: ['Cafe POS', 'Barista Tool', 'QRIS Payment', 'Thermal Receipt', 'PWA Offline'],
+    metrics: [
+      { label: 'Waktu Input Pesanan', value: '< 10 Detik' },
+      { label: 'Akses Demo Publik', value: '100% Bebas Akses' },
+      { label: 'Dukungan Perangkat', value: 'HP, Tablet & POS' }
+    ],
+    activeStatus: 'Sistem Demo Interaktif Aktif 24/7',
+    liveUrl: 'https://coffee-stand-demo.netlify.app/', // Akan diupdate begitu link repo coffee-stand aktif
+    isInteractiveDemo: true
+  },
   {
     id: 'pelangi-efrata-pos-web',
     title: 'Enterprise POS & Company Profile System',
@@ -31,14 +56,17 @@ export const portfolioData: PortfolioItem[] = [
       { label: 'Status Operasional', value: '100% Aktif Digunakan' },
       { label: 'Akurasi Transaksi', value: '99.9%' }
     ],
-    activeStatus: 'Sistem aktif digunakan dalam operasional harian bisnis'
+    activeStatus: 'Sistem aktif digunakan dalam operasional harian bisnis',
+    liveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
+    isInteractiveDemo: false
   }
 ];
 
 export const portfolioLinks = {
-  webLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
+  pelangiWebLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
+  coffeeStandLiveUrl: 'https://coffee-stand-demo.netlify.app/',
   posAccessType: 'Private Enterprise Repository (NDA Protected)',
-  posNotice: 'Sistem POS berjalan pada private corporate environment dengan pengamanan data internal. Untuk melihat live demo walkthrough atau presentasi arsitektur modul kasirnya, calon mitra dapat mengajukan sesi konsultasi eksklusif.'
+  posNotice: 'Sistem POS CV Pelangi Efrata berjalan pada private corporate environment dengan pengamanan data internal. Untuk melihat live demo walkthrough atau presentasi arsitektur modul kasirnya, calon mitra dapat mengajukan sesi konsultasi eksklusif.'
 };
 
 export interface IndustrySolution {
