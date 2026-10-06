@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
+import IndustrySolutions from '../components/sections/IndustrySolutions.astro';
+import PortfolioCaseStudy from '../components/sections/PortfolioCaseStudy.astro';
+import EarlyPartner from '../components/sections/EarlyPartner.astro';
+import AppRequestWizard from '../components/sections/AppRequestWizard.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout
+  title="Veridion Studio | Software House UMKM, POS Kasir & Web Custom"
+  description="Veridion Studio: Jasa pembuatan software kustom, POS kasir cafe, sistem manajemen apotek, dan website bisnis terpercaya. Program peluncuran: Gratis biaya development untuk 3 klien pertama!"
+>
+  <Navbar />
+  <main class="flex-1">
+    <Hero />
+    <PortfolioCaseStudy />
+    <IndustrySolutions />
+    <EarlyPartner />
+    <AppRequestWizard />
+  </main>
+  <Footer />
+</Layout>
+

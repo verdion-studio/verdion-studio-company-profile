@@ -1,0 +1,29 @@
+{
+  "name": "verdion-studio-company-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build || astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verdion-studio/verdion-studio-company-profile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verdion-studio/verdion-studio-company-profile/issues"
+  },
+  "homepage": "https://github.com/verdion-studio/verdion-studio-company-profile#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "lucide-astro": "^0.556.0",
+    "tailwindcss": "^4.3.3"
+  }
+}

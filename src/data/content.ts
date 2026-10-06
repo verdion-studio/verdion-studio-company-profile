@@ -1,0 +1,95 @@
+export interface PortfolioItem {
+  id: string;
+  title: string;
+  client: string;
+  category: string;
+  impact: string;
+  description: string;
+  features: string[];
+  tags: string[];
+  metrics: { label: string; value: string }[];
+  activeStatus: string;
+}
+
+export const portfolioData: PortfolioItem[] = [
+  {
+    id: 'pelangi-efrata-pos-web',
+    title: 'Enterprise POS & Company Profile System',
+    client: 'CV Pelangi Efrata',
+    category: 'Point of Sale & Web Portal',
+    impact: 'Meningkatkan akurasi transaksi harian dan efisiensi rekapitulasi inventaris secara real-time.',
+    description: 'Solusi software end-to-end yang mengintegrasikan sistem kasir operasional harian (Point of Sale) toko dan web company profile resmi untuk memperkuat kredibilitas B2B.',
+    features: [
+      'Sistem Kasir (POS) responsif & rekap transaksi harian instan',
+      'Manajemen data stok & produk dengan peringatan stok menipis',
+      'Company Profile korporat teroptimasi SEO & profil perusahaan resmi',
+      'Ekspor laporan penjualan dan histori pembukuan berkala'
+    ],
+    tags: ['POS Kasir', 'Company Profile', 'Inventory Management', 'B2B Enterprise'],
+    metrics: [
+      { label: 'Efisiensi Waktu Rekap', value: '70% Lebih Cepat' },
+      { label: 'Status Operasional', value: '100% Aktif Digunakan' },
+      { label: 'Akurasi Transaksi', value: '99.9%' }
+    ],
+    activeStatus: 'Sistem aktif digunakan dalam operasional harian bisnis'
+  }
+];
+
+export interface IndustrySolution {
+  id: string;
+  name: string;
+  iconName: string;
+  badge: string;
+  description: string;
+  recommendedFeatures: string[];
+}
+
+export const industrySolutions: IndustrySolution[] = [
+  {
+    id: 'cafe-resto',
+    name: 'Cafe, Coffee Shop & Resto',
+    iconName: 'Coffee',
+    badge: 'Food & Beverage',
+    description: 'Sistem operasional kasir cepat, pesanan meja QR, serta kontrol bahan baku tanpa selisih.',
+    recommendedFeatures: ['Smart POS Kasir Cepat', 'Menu Digital & QR Order', 'Kitchen Order Ticket (KOT)', 'Manajemen Stok Bahan Baku']
+  },
+  {
+    id: 'apotik-klinik',
+    name: 'Apotek & Klinik Mandiri',
+    iconName: 'Pill',
+    badge: 'Kesehatan & Farmasi',
+    description: 'Kontrol stok obat dengan expired date tracker, resep digital, dan pencatatan transaksi farmasi.',
+    recommendedFeatures: ['Expired Date & Batch Tracking', 'Sistem Resep & Kasir Apotek', 'Laporan Obat Masuk/Keluar', 'Multi-Unit Harga']
+  },
+  {
+    id: 'perhotelan-villa',
+    name: 'Perhotelan, Villa & Guest House',
+    iconName: 'Building',
+    badge: 'Hospitality',
+    description: 'Manajemen ketersediaan kamar, reservasi mandiri, dan invoice tamu otomatis.',
+    recommendedFeatures: ['Room Availability Calendar', 'Sistem Booking & Check-in/out', 'Invoice Tamu Otomatis', 'Katalog Layanan & Wisata']
+  },
+  {
+    id: 'retail-umkm',
+    name: 'Retail, Grosir & Toko Kelontong',
+    iconName: 'ShoppingBag',
+    badge: 'Retail & Dagang',
+    description: 'Katalog produk online, kasir barcode scanner, dan integrasi pesanan instan via WhatsApp.',
+    recommendedFeatures: ['Barcode Scanner POS', 'Laporan Laba Rugi Harian', 'Katalog WhatsApp Order', 'Mini CRM Member/Pelanggan']
+  }
+];
+
+export const earlyPartnerProgram = {
+  totalSlots: 3,
+  availableSlots: 3,
+  badgeText: 'Program Kemitraan Percontohan',
+  title: 'Veridion Early Partner Program: Gratis Biaya Development untuk 3 Klien Pertama',
+  description: 'Khusus untuk 3 pemilik usaha (UMKM, Cafe, Apotek, Hotel, Retail) yang siap mentransformasi sistem bisnisnya. Kami bangunkan aplikasi/web sesuai kebutuhan Anda tanpa biaya jasa pengembangan.',
+  conditions: [
+    'Gratis 100% Development Fee (Biaya Pembuatan Aplikasi / Web)',
+    'Klien hanya menanggung domain/server pihak ketiga jika ingin domain kustom sendiri',
+    'Sebagai timbal balik, klien bersedia memberikan feedback dan menjadi studi kasus resmi Veridion Studio',
+    'Prioritas utama diberikan kepada bisnis yang sudah aktif beroperasi'
+  ]
+};
+

@@ -1,0 +1,96 @@
+---
+import { earlyPartnerProgram } from '../../data/content';
+---
+
+<section id="early-partner" class="py-20 md:py-28 relative bg-gradient-to-b from-[#0B0F19] via-emerald-950/20 to-[#0B0F19] border-y border-emerald-900/30 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-emerald-500/30 bg-slate-900/90 p-8 sm:p-12 lg:p-16 relative shadow-2xl backdrop-blur-xl">
+      
+      <!-- Glow Decor -->
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left: Explanations & Conditions (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>PROGRAM SPESIAL PELUNCURAN</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            Gratis Biaya Development untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">3 Klien Pertama</span>
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            Sebagai langkah awal memperkenalkan standar rekayasa software Veridion Studio, kami membuka kesempatan kemitraan percontohan. Kami akan membangun sistem/web Anda tanpa biaya pengerjaan.
+          </p>
+
+          <!-- Benefits & Terms -->
+          <div class="space-y-3 pt-2">
+            {earlyPartnerProgram.conditions.map((cond) => (
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-sm text-slate-200">{cond}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="pt-4">
+            <a
+              href="#request-builder"
+              class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            >
+              <span>Ajukan Aplikasi & Klaim Kuota Gratis</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Slot Tracker Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-slate-950 p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Status Kuota Terbuka</span>
+              <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                Pendaftaran Dibuka
+              </span>
+            </div>
+
+            <!-- Visual Slot Boxes -->
+            <div>
+              <p class="text-xs text-slate-400 mb-3">Tersedia <strong class="text-white">3 dari 3 Kuota</strong> Klien Pertama:</p>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-center">
+                  <span class="block text-xs font-bold text-emerald-400">Slot 1</span>
+                  <span class="text-[11px] text-emerald-200">TERSEDIA</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-center">
+                  <span class="block text-xs font-bold text-emerald-400">Slot 2</span>
+                  <span class="text-[11px] text-emerald-200">TERSEDIA</span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-center">
+                  <span class="block text-xs font-bold text-emerald-400">Slot 3</span>
+                  <span class="text-[11px] text-emerald-200">TERSEDIA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notice Info -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 text-xs text-slate-400 leading-relaxed">
+              <p>
+                <strong class="text-slate-200">Kenapa Gratis?</strong> Kami ingin membuktikan kapabilitas kami dengan hasil riil yang bisa langsung Anda pakai di bisnis Anda, sekaligus membangun relasi jangka panjang.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
