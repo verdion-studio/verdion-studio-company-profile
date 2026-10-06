@@ -1,33 +1,45 @@
-# Veridion Studio — Company Profile & Interactive App Request System
+# Veridion Studio — Independent Tech Studio Platform
 
-Platform web resmi **Veridion Studio**, software house solutif yang berfokus membantu transformasi digital untuk UMKM, Cafe & Resto, Apotek, dan Industri Perhotelan di Indonesia.
+Platform web resmi **Veridion Studio**, Independent Tech Studio yang berfokus membantu transformasi digital untuk UMKM, Cafe & Resto, Apotek, dan Industri Perhotelan di Indonesia melalui software kustom, Point of Sale (POS) cerdas, dan website bisnis modern.
 
-Dibangun dengan arsitektur **Jamstack Statis** yang berfokus penuh pada **SEO (Search Engine Optimization)**, kecepatan loading instan, dan zero-database.
+Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang berfokus penuh pada **SEO (Search Engine Optimization)** maksimal, kecepatan akses instan, zero-database, serta fitur Lead Generation interaktif.
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Fitur Utama Platform
 
-1. **Branding & Positioning Kredibel**:
-   - Menghilangkan persepsi bahwa software custom itu mahal dan rumit bagi pemilik usaha lokal.
-   - Dilengkapi trust badge dan metrik performa sistem nyata.
-2. **Studi Kasus & Portofolio Nyata**:
-   - **CV Pelangi Efrata**: Sistem POS kasir operasional harian terintegrasi web profil perusahaan (bukan konsep/mockup fiktif).
-3. **Program Early Partner (Gratis 3 Klien Pertama)**:
-   - Program percontohan eksklusif untuk 3 pemilik bisnis pertama tanpa biaya pengerjaan (*free development fee*).
-   - Dilengkapi *Live Slot Indicator* (3/3 kuota tersedia).
-4. **Interactive App Request Wizard**:
-   - Calon klien dapat memilih sektor usaha, kebutuhan sistem, platform, dan modul fitur spesifik.
-   - Generator otomatis merangkum preferensi menjadi teks terstruktur rapi untuk diajukan via **Direct WhatsApp** atau **Email Resmi**.
+1. **Branding & Positioning "Independent Tech Studio"**:
+   - Menghilangkan stigma bahwa software custom itu mahal, lama, dan rumit bagi pemilik usaha lokal.
+   - Keunggulan kompetitif: **Konsultasi langsung dengan lead developer tanpa perantara sales/birokrasi korporat**.
+   - Dilengkapi dukungan **Light Mode & Dark Mode** interaktif dengan transisi halus dan anti-flash script.
+
+2. **Showcase Portofolio & Produk Nyata**:
+   - **CV Pelangi Efrata**: Sistem Enterprise POS kasir operasional harian terintegrasi web profil perusahaan resmi ([Live Web Portal](https://euphonious-liger-9f90e3.netlify.app/)).
+   - **Coffee Stand POS**: Smart POS & Barista Ordering System khusus kedai kopi dengan kustomisasi minuman (suhu, level gula, ekstra shot), kalkulator kembalian cepat, dan cetak struk thermal 58mm ([Live Demo Hub](https://coffee-stand-demo.netlify.app/)).
+   - **Enterprise Notice**: Framing profesional alasan repositori sistem POS privat demi keamanan data finansial klien.
+
+3. **Transparansi Alur Kerja (How We Work)**:
+   - 4 tahapan pengerjaan transparan: Konsultasi Tanpa Sales $\to$ Prototipe Alur Staf $\to$ Uji Coba Hardware Nyata $\to$ Pelatihan Kasir & Garansi Bug.
+
+4. **FAQ Interaktif**:
+   - Menjawab pertanyaan kritis pemilik usaha seputar kompatibilitas HP/tablet biasa, kapabilitas kasir saat internet mati (*offline-ready*), garansi perbaikan, dan ketiadaan biaya langganan bulanan tersembunyi.
+
+5. **Program Early Partner (Gratis Biaya Development 3 Klien Pertama)**:
+   - Program kemitraan percontohan tanpa biaya pengerjaan (*free development fee*) untuk 3 bisnis aktif pertama dengan timbal balik publikasi studi kasus.
+   - Dilengkapi *Live Slot Tracker* (3/3 kuota tersedia).
+
+6. **Interactive App Request Wizard**:
+   - Calon klien dapat memilih sektor usaha, jenis solusi, dan modul fitur spesifik.
+   - Otomatis merangkum spesifikasi proyek menjadi format teks terstruktur rapi untuk diajukan via **Direct WhatsApp** atau **Email Resmi**.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Framework**: [Astro](https://astro.build/) (v5+) — Static Site Generation (SSG), Zero JavaScript by default.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4+) via `@tailwindcss/vite`.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4+) via `@tailwindcss/vite` dengan custom dark variant.
 - **Icons**: Lucide Icons & Custom SVG Vector.
-- **Hosting / Deployment**: Netlify (Static Deploy).
+- **Hosting / Deployment**: Netlify (Drag & Drop Static Deploy / CI).
 
 ---
 
@@ -60,15 +72,13 @@ Dibangun dengan arsitektur **Jamstack Statis** yang berfokus penuh pada **SEO (S
 
 ## 🌐 Panduan Deployment ke Netlify (Drag & Drop)
 
-Untuk akun Netlify tipe Organization atau Personal yang ingin deploy instan tanpa menghubungkan Git repo:
-
 1. Jalankan perintah build:
    ```bash
    npm run build
    ```
-2. Buka **[Netlify Drop](https://app.netlify.com/drop)** di browser.
-3. Tarik (*drag and drop*) folder **`dist/`** yang ada di direktori proyek ini langsung ke area upload di halaman Netlify Drop.
-4. Situs akan langsung live dalam beberapa detik dan Anda akan mendapatkan URL publik resmi (bisa disambungkan dengan custom domain).
+2. Buka **[Netlify Drop](https://app.netlify.com/drop)** atau masuk ke tab **Deploys** pada situs Netlify Anda ([monumental-pithivier-fc9158.netlify.app](https://monumental-pithivier-fc9158.netlify.app/)).
+3. Tarik (*drag and drop*) folder **`dist/`** yang ada di direktori proyek ini langsung ke area upload.
+4. Situs akan langsung ter-update seketika dengan versi terbaru.
 
 ---
 
@@ -82,13 +92,13 @@ Untuk akun Netlify tipe Organization atau Personal yang ingin deploy instan tanp
 ├── public/                  # Aset publik statis (favicon, logo, icons)
 ├── src/
 │   ├── components/
-│   │   └── sections/        # Komponen modular: Navbar, Hero, Portfolio, Wizard, Footer
-│   ├── data/                # Data statis konten & portofolio (src/data/content.ts)
-│   ├── layouts/             # Template layout utama & SEO meta tags
+│   │   └── sections/        # Komponen modular: Navbar, Hero, Portfolio, HowWeWork, FAQ, Wizard, Footer
+│   ├── data/                # Data statis portofolio, solusi industri, faqs (src/data/content.ts)
+│   ├── layouts/             # Template layout utama, SEO meta tags, & theme script
 │   ├── pages/               # Routing halaman (index.astro)
-│   └── styles/              # Global CSS Tailwind
-├── astro.config.mjs         # Konfigurasi Astro
-├── netlify.toml             # Konfigurasi header & routing Netlify
+│   └── styles/              # Global CSS Tailwind v4 & custom variants
+├── astro.config.mjs         # Konfigurasi Astro + Vite Tailwind
+├── netlify.toml             # Konfigurasi keamanan header & routing Netlify
 └── package.json             # Manifest package & npm scripts
 ```
 
