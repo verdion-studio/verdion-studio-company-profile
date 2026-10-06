@@ -127,3 +127,35 @@ export const earlyPartnerProgram = {
   ]
 };
 
+export const workingSteps = [
+  {
+    step: '01',
+    title: 'Konsultasi Kebutuhan (Tanpa Sales)',
+    subtitle: 'Direct with Developer',
+    description: 'Diskusi langsung dengan lead developer teknis via WhatsApp / Google Meet untuk membedah SOP bisnis, kendala kasir, atau kebutuhan web Anda tanpa istilah teknis yang membingungkan.',
+    deliverable: 'Spesifikasi fitur disepakati & estimasi timeline pengerjaan yang jelas'
+  },
+  {
+    step: '02',
+    title: 'Prototipe & Desain Alur Kerja',
+    subtitle: 'Tailored for Your Staff',
+    description: 'Kami merancang antarmuka sistem yang disesuaikan persis dengan kebiasaan operasional toko Anda (touch-friendly, tombol cepat, dan tata letak menu yang intuitif).',
+    deliverable: 'Preview interaktif siap dicoba sebelum tahap integrasi final'
+  },
+  {
+    step: '03',
+    title: 'Integrasi & Uji Coba Lapangan',
+    subtitle: 'Real Hardware Testing',
+    description: 'Sistem diuji coba secara ketat di perangkat nyata (HP/Tablet kasir, printer struk thermal bluetooth, kalkulasi diskon, dan pencatatan inventaris tanpa selisih).',
+    deliverable: 'Sistem stabil 100% bebas error fatal dan siap dipakai operasional'
+  },
+  {
+    step: '04',
+    title: 'Pelatihan Staf & Garansi Pasca-Rilis',
+    subtitle: 'Zero Confusion Handover',
+    description: 'Kami mendampingi langsung hingga kasir dan owner mahir menggunakan sistem, lengkap dengan garansi perbaikan bug cepat dan dukungan teknis berkelanjutan.',
+    deliverable: 'Panduan penggunaan praktis & garansi pendampingan langsung'
+  }
+];
+
+
