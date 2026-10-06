@@ -127,6 +127,28 @@ export const earlyPartnerProgram = {
   ]
 };
 
+export const pilotTerms = {
+  title: 'Ketentuan & Batasan Program Early Partner',
+  subtitle: 'Transparansi Penuh untuk Hubungan Kemitraan yang Sehat & Saling Menguntungkan',
+  covered: [
+    '1 Unit Sistem Software Inti (Pilih salah satu: Web Portal Bisnis / Sistem Kasir POS Cafe / Sistem Inventori Toko)',
+    'Setup awal hingga 50 daftar produk/menu dan master data bisnis Anda',
+    'Pelatihan staf kasir dan pemilik usaha hingga mandiri mengoperasikan sistem',
+    'Garansi pemeliharaan & perbaikan bug selama 30 hari pasca serah terima'
+  ],
+  clientCommitment: [
+    'Menyediakan data menu/produk, harga, dan alur kerja bisnis secara kooperatif',
+    'Menguji coba dan menggunakan sistem secara aktif dalam operasional toko',
+    'Bersedia memberikan ulasan testimoni tertulis atau video singkat (30-45 detik) setelah sistem berjalan',
+    'Memberikan izin pencantuman nama brand & logo bisnis sebagai portofolio resmi Veridion Studio'
+  ],
+  notCovered: [
+    'Biaya perpanjangan nama domain pribadi (cth: .com/.id) atau cloud database berbayar pihak ketiga',
+    'Pengadaan fisik hardware tambahan seperti tablet, smartphone, atau printer kasir',
+    'Permintaan fitur di luar kesepakatan awal (fitur kompleks tambahan dapat didiskusikan terpisah)'
+  ]
+};
+
 export const workingSteps = [
   {
     step: '01',

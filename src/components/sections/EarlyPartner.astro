@@ -1,5 +1,5 @@
 ---
-import { earlyPartnerProgram } from '../../data/content';
+import { earlyPartnerProgram, pilotTerms } from '../../data/content';
 ---
 
 <section id="early-partner" class="py-20 md:py-28 relative bg-gradient-to-b from-slate-100 via-emerald-50/50 to-slate-100 dark:from-[#0B0F19] dark:via-emerald-950/20 dark:to-[#0B0F19] border-y border-emerald-500/20 dark:border-emerald-900/30 overflow-hidden transition-colors duration-300">
@@ -9,8 +9,9 @@ import { earlyPartnerProgram } from '../../data/content';
       <!-- Glow Decor -->
       <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
+      <!-- Top Row: Overview & Slots -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Left: Explanations & Conditions (7 cols) -->
+        <!-- Left: Explanations (7 cols) -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-wide">
             <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping"></span>
@@ -39,7 +40,7 @@ import { earlyPartnerProgram } from '../../data/content';
             ))}
           </div>
 
-          <div class="pt-4">
+          <div class="pt-4 flex flex-wrap gap-4 items-center">
             <a
               href="#request-builder"
               class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
@@ -90,6 +91,75 @@ import { earlyPartnerProgram } from '../../data/content';
           </div>
         </div>
       </div>
+
+      <!-- Bottom Row: Transparent Terms & Scope (Professional Boundaries) -->
+      <div class="mt-14 pt-10 border-t border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            {pilotTerms.title}
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+            {pilotTerms.subtitle}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+          <!-- Col 1: Covered for Free -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider text-[11px]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Yang Dikerjakan Gratis (100% Free):</span>
+            </div>
+            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+              {pilotTerms.covered.map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Col 2: Client Commitment -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold uppercase tracking-wider text-[11px]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>Komitmen Timbal Balik Klien:</span>
+            </div>
+            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+              {pilotTerms.clientCommitment.map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 font-bold">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Col 3: Not Covered / Out of Scope -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+            <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+              <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Di Luar Tanggungan Program:</span>
+            </div>
+            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+              {pilotTerms.notCovered.map((item) => (
+                <li class="flex items-start gap-2">
+                  <span class="text-slate-400 font-bold">-</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
