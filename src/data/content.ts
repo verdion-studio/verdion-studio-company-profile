@@ -35,8 +35,9 @@ export const portfolioData: PortfolioItem[] = [
       { label: 'Komisi OTA Diselamatkan', value: 'Rp 28.4 Jt/bln' },
       { label: 'Risiko Double Booking', value: '0 Kasus (Sync iCal)' }
     ],
-    activeStatus: 'Arsitektur Kustom Aktif — Siap Diimplementasikan ke Properti Anda',
-    isInteractiveDemo: false
+    activeStatus: 'Sistem Demo Interaktif Aktif 24/7',
+    liveUrl: 'https://cute-liger-eb138a.netlify.app/',
+    isInteractiveDemo: true
   },
   {
     id: 'lumina-resort-pms-concierge',
@@ -112,6 +113,7 @@ export const portfolioData: PortfolioItem[] = [
 ];
 
 export const portfolioLinks = {
+  auraDirectLiveUrl: 'https://cute-liger-eb138a.netlify.app/',
   pelangiWebLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
   coffeeStandLiveUrl: 'https://coffee-stand-demo.netlify.app/',
   posAccessType: 'Private Enterprise Repository & Hospitality Client Environment',

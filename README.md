@@ -20,7 +20,7 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    - Sistem secara real-time menghitung kebocoran komisi 18% OTA bulanan dan estimasi profit bersih yang diselamatkan setiap tahunnya.
 
 3. **Portofolio & Studi Kasus Hospitality Terpercaya**:
-   - **Aura Haven Luxury Villas**: Direct Booking Engine & Multi-Channel PMS dengan iCal sync 2-arah dan WhatsApp concierge (hemat komisi OTA Rp 28,4 Jt/bulan).
+   - **Aura Haven Luxury Villas**: Direct Booking Engine & Multi-Channel PMS dengan iCal sync 2-arah, kalkulator tarif musiman, dan WhatsApp concierge ([Live Demo Booking Hub](https://cute-liger-eb138a.netlify.app/)).
    - **Lumina Eco-Resort & Suites**: Cloud PMS Front Desk, Housekeeping mobile updater, dan QR Room Service tertaut langsung ke Folio Tagihan Kamar.
    - **Hotel Lounge & Stand Barista POS**: Live interactive touch POS demo untuk outlet F&B/Lounge hotel dengan QRIS dan cetak struk thermal 58mm ([Live Demo Hub](https://coffee-stand-demo.netlify.app/)).
    - **CV Pelangi Efrata**: Sistem supply chain logistik & distribusi amenities hotel operasional nyata ([Live Web Portal](https://euphonious-liger-9f90e3.netlify.app/)).
