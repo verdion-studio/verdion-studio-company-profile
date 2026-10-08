@@ -1,21 +1,31 @@
 ---
 import { industrySolutions } from '../../data/content';
+import { industrySolutionsEn } from '../../data/content-en';
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].solutions;
+const solutions = lang === 'en' ? industrySolutionsEn : industrySolutions;
 ---
 
 <section id="solusi" class="py-20 md:py-28 relative bg-slate-100/60 dark:bg-slate-950/50 border-y border-slate-200 dark:border-slate-900 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold mb-3">Spesialisasi Hospitality</h2>
+      <h2 class="text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold mb-3">{t.badge}</h2>
       <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Solusi Rekayasa Software Sesuai Karakter Properti Anda
+        {t.title}
       </p>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Setiap tipe properti memiliki alur tamu dan tantangan operasional yang unik. Kami membangun modul khusus yang menjawab persis kebutuhan unit Anda.
+        {t.desc}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {industrySolutions.map((item) => (
+      {solutions.map((item) => (
         <div class="group relative rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 p-6 hover:border-emerald-500/50 hover:shadow-xl dark:hover:bg-slate-900 transition-all duration-300 flex flex-col justify-between shadow-sm">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -38,11 +48,11 @@ import { industrySolutions } from '../../data/content';
 
             <!-- Pain point box -->
             <div class="mt-4 p-3 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/40 text-[11px] text-amber-800 dark:text-amber-300">
-              <span class="font-bold">Kendala Umum:</span> {item.painPoints}
+              <span class="font-bold">{t.painPointLabel}</span> {item.painPoints}
             </div>
 
             <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80">
-              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">Modul Sistem Unggulan:</p>
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">{t.modulesLabel}</p>
               <ul class="space-y-2">
                 {item.recommendedFeatures.map((feat) => (
                   <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
@@ -61,7 +71,7 @@ import { industrySolutions } from '../../data/content';
               href="#request-builder"
               class="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors"
             >
-              <span>Ajukan Sistem untuk Properti Ini</span>
+              <span>{t.cta}</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

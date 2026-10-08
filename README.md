@@ -14,6 +14,8 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    - Berfokus 100% pada ekosistem akomodasi perhotelan, villa mewah, dan resort.
    - Keunggulan: **Diskusi teknis langsung dengan lead developer tanpa perantara sales/birokrasi korporat**.
    - Dilengkapi dukungan **Light Mode & Dark Mode** interaktif dengan transisi halus dan anti-flash script.
+   - **Dukungan Bilingual (ID | EN)**: Switcher bahasa di Navbar desktop & drawer mobile (`/` untuk Bahasa Indonesia dan `/en` untuk English) menyasar pemilik properti lokal maupun ekspatriat di Bali/Lombok.
+   - **Modern Typography (Inter)**: Tipografi berkecepatan tinggi dengan tracking dan kerning optimal untuk kenyamanan membaca data ADR, okupansi, dan spesifikasi kamar.
 
 2. **Kalkulator Penghematan Komisi OTA & ROI Properti (Interactive Widget)**:
    - Hotelier dan pemilik villa dapat menggeser slider jumlah kamar, ADR (Average Daily Rate), okupansi, dan persentase OTA.

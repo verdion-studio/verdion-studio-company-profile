@@ -1,219 +1,208 @@
 ---
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].wizard;
+
+const propertyTypes = [
+  { value: 'Luxury Private Villa / Vacation Rental', label: 'Private Villa', sub: 'Luxury Rental' },
+  { value: 'Boutique Hotel / Heritage Stay', label: 'Boutique Hotel', sub: 'City / Heritage' },
+  { value: 'Glamping & Eco-Resort', label: lang === 'en' ? 'Glamping & Resort' : 'Glamping & Resort', sub: 'Nature & Retreat' },
+  { value: 'Hotel F&B / Lounge / Beach Club', label: 'Hotel F&B / Bar', sub: 'Resto & Lounge' },
+];
+
+const roomCapacities = [
+  { value: '1 - 5 Units (Private/Exclusive)', label: lang === 'en' ? '1 - 5 Units' : '1 - 5 Unit', sub: 'Private Villa / Exclusive' },
+  { value: '6 - 15 Rooms (Boutique Stay)', label: lang === 'en' ? '6 - 15 Rooms' : '6 - 15 Kamar', sub: 'Medium Stay' },
+  { value: '16 - 35 Rooms (Resort / Hotel)', label: lang === 'en' ? '16 - 35 Rooms' : '16 - 35 Kamar', sub: 'Resort / Hotel' },
+  { value: '35+ Rooms (Large Scale Property)', label: lang === 'en' ? '35+ Rooms' : '35+ Kamar', sub: 'Multi-Building' },
+];
+
+const solutionTypes = [
+  {
+    value: 'Direct Booking Engine + Payment Gateway',
+    title: 'Direct Booking Engine',
+    desc: lang === 'en' 
+      ? 'Web direct booking, real-time availability calendar, deposit/full pay via QRIS/Card with 0% OTA fees.'
+      : 'Web direct booking, kalender ketersediaan, bayar DP/Lunas via QRIS/Kartu Kredit tanpa komisi OTA.'
+  },
+  {
+    value: 'Cloud PMS Front Desk & Housekeeping',
+    title: 'Cloud PMS Front Desk',
+    desc: lang === 'en'
+      ? 'Room grid check-in/out, live mobile housekeeping tracker, room billing folios, and daily night audits.'
+      : 'Room grid check-in/out, status housekeeping real-time, folio tagihan, dan laporan night audit.'
+  },
+  {
+    value: 'All-in-One Full Property Suite (Booking + PMS + Concierge)',
+    title: 'All-in-One Property Suite',
+    desc: lang === 'en'
+      ? 'End-to-end full stack: Direct Booking Web + Front Desk PMS + WhatsApp Concierge + F&B Room Folio.'
+      : 'Paket lengkap end-to-end: Direct Booking Web + Front Desk PMS + WhatsApp Concierge + F&B Folio.'
+  }
+];
+
+const featureList = [
+  { value: 'iCal 2-Way Sync (Airbnb & Booking.com)', label: lang === 'en' ? 'iCal 2-Way Sync (Anti-Overbooking)' : 'iCal Sync (Anti-Overbooking)' },
+  { value: 'Automated WhatsApp Guest Concierge', label: lang === 'en' ? 'Automated WhatsApp Concierge' : 'WhatsApp Concierge Otomatis' },
+  { value: 'Direct Payment Gateway (QRIS & Credit Cards)', label: lang === 'en' ? 'Direct Payment Gateway' : 'Direct Payment Gateway' },
+  { value: 'In-Room Dining QR & Folio Billing', label: lang === 'en' ? 'QR Room Dining & Folio Billing' : 'QR Room Dining & Folio Billing' },
+  { value: 'Housekeeping Mobile Room Tracker', label: lang === 'en' ? 'Housekeeping Mobile Tracker' : 'Housekeeping Mobile Tracker' },
+  { value: 'Night Audit & Local Hotel Tax PB1 (10%)', label: lang === 'en' ? 'Night Audit & Hotel Tax (PB1 10%)' : 'Night Audit & Laporan PB1 (10%)' },
+];
 ---
 
 <section id="request-builder" class="py-20 md:py-28 relative">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-300 dark:border-cyan-500/30 text-cyan-800 dark:text-cyan-400 text-xs font-semibold mb-3">
-        <span>Interactive Property Spec Builder</span>
+        <span>{t.badge}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Rancang Sistem Properti Sesuai Kebutuhan Villa / Hotel Anda
+        {t.title}
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Pilih jenis properti, jumlah kamar, dan modul yang ingin dibangun. Spesifikasi sistem Anda akan terangkum rapi dan terhubung langsung ke WhatsApp & Email lead developer Veridion Studio.
+        {t.desc}
       </p>
     </div>
 
     <!-- Interactive Card Form -->
     <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-300">
-      <form id="propertyRequestForm" class="space-y-10">
+      <form id="propertyRequestForm" data-lang={lang} class="space-y-10">
         
         <!-- Step 1: Property Type -->
         <div>
           <label class="block text-sm font-bold text-slate-900 dark:text-white mb-3">
-            1. Apa Jenis Properti Anda?
+            {t.step1}
           </label>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="propertyTypeGrid">
-            <label class="cursor-pointer">
-              <input type="radio" name="propertyType" value="Luxury Private Villa / Vacation Rental" class="peer sr-only" checked />
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Private Villa</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Luxury Rental</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="propertyType" value="Boutique Hotel / Heritage Stay" class="peer sr-only" />
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Boutique Hotel</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">City / Heritage</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="propertyType" value="Glamping & Eco-Resort" class="peer sr-only" />
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Glamping & Resort</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Nature & Retreat</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="propertyType" value="Hotel F&B / Lounge / Beach Club" class="peer sr-only" />
-              <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Hotel F&B / Bar</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Resto & Lounge</span>
-              </div>
-            </label>
+            {propertyTypes.map((pt, idx) => (
+              <label class="cursor-pointer">
+                <input type="radio" name="propertyType" value={pt.value} class="peer sr-only" checked={idx === 0} />
+                <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                  <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">{pt.label}</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400">{pt.sub}</span>
+                </div>
+              </label>
+            ))}
           </div>
         </div>
 
         <!-- Step 2: Room Capacity -->
         <div>
           <label class="block text-sm font-bold text-slate-900 dark:text-white mb-3">
-            2. Berapa Jumlah Kamar / Unit yang Dikelola?
+            {t.step2}
           </label>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <label class="cursor-pointer">
-              <input type="radio" name="roomCapacity" value="1 - 5 Unit (Private/Exclusive)" class="peer sr-only" checked />
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">1 - 5 Unit</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Private Villa / Exclusive</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="roomCapacity" value="6 - 15 Kamar (Boutique Stay)" class="peer sr-only" />
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">6 - 15 Kamar</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Medium Stay</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="roomCapacity" value="16 - 35 Kamar (Resort / Hotel)" class="peer sr-only" />
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">16 - 35 Kamar</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Resort / Hotel</span>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="roomCapacity" value="35+ Kamar (Large Scale Property)" class="peer sr-only" />
-              <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">35+ Kamar</span>
-                <span class="text-[11px] text-slate-500 dark:text-slate-400">Multi-Building</span>
-              </div>
-            </label>
+            {roomCapacities.map((rc, idx) => (
+              <label class="cursor-pointer">
+                <input type="radio" name="roomCapacity" value={rc.value} class="peer sr-only" checked={idx === 0} />
+                <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 text-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                  <span class="block text-sm font-semibold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">{rc.label}</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400">{rc.sub}</span>
+                </div>
+              </label>
+            ))}
           </div>
         </div>
 
         <!-- Step 3: Core Module Selection -->
         <div>
           <label class="block text-sm font-bold text-slate-900 dark:text-white mb-3">
-            3. Apa Fokus Solusi Software Utama yang Diinginkan?
+            {t.step3}
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <label class="cursor-pointer">
-              <input type="radio" name="solutionType" value="Direct Booking Engine + Payment Gateway" class="peer sr-only" checked />
-              <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <p class="text-sm font-bold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Direct Booking Engine</p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Web direct booking, kalender ketersediaan, bayar DP/Lunas via QRIS/Kartu Kredit tanpa komisi OTA.</p>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="solutionType" value="Cloud PMS Front Desk & Housekeeping" class="peer sr-only" />
-              <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <p class="text-sm font-bold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">Cloud PMS Front Desk</p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Room grid check-in/out, status housekeeping real-time, folio tagihan, dan laporan night audit.</p>
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="solutionType" value="All-in-One Full Property Suite (Booking + PMS + Concierge)" class="peer sr-only" />
-              <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
-                <p class="text-sm font-bold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">All-in-One Property Suite</p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Paket lengkap end-to-end: Direct Booking Web + Front Desk PMS + WhatsApp Concierge + F&B Folio.</p>
-              </div>
-            </label>
+            {solutionTypes.map((st, idx) => (
+              <label class="cursor-pointer">
+                <input type="radio" name="solutionType" value={st.value} class="peer sr-only" checked={idx === 0} />
+                <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-transparent peer-checked:border-emerald-500 peer-checked:bg-emerald-50 dark:peer-checked:bg-emerald-950/30 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                  <p class="text-sm font-bold text-slate-800 dark:text-white peer-checked:text-emerald-700 dark:peer-checked:text-emerald-400">{st.title}</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">{st.desc}</p>
+                </div>
+              </label>
+            ))}
           </div>
         </div>
 
         <!-- Step 4: Specific Features -->
         <div>
           <label class="block text-sm font-bold text-slate-900 dark:text-white mb-1">
-            4. Pilih Modul Spesifik yang Dibutuhkan (Bisa lebih dari 1):
+            {t.step4}
           </label>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Centang fitur yang paling penting untuk operasional properti Anda.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">{t.step4Hint}</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="iCal 2-Way Sync (Airbnb & Booking.com)" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">iCal Sync (Anti-Overbooking)</span>
-            </label>
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="Automated WhatsApp Guest Concierge" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">WhatsApp Concierge Otomatis</span>
-            </label>
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="Direct Payment Gateway (QRIS & Kartu Kredit)" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">Direct Payment Gateway</span>
-            </label>
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="In-Room Dining QR & Folio Billing" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">QR Room Dining & Folio Billing</span>
-            </label>
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="Housekeeping Mobile Room Tracker" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">Housekeeping Mobile Tracker</span>
-            </label>
-            <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
-              <input type="checkbox" name="features" value="Night Audit & Rekapitulasi Pajak PB1 Hotel" class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" />
-              <span class="text-xs font-medium text-slate-700 dark:text-slate-200">Night Audit & Laporan PB1 (10%)</span>
-            </label>
+            {featureList.map((f, idx) => (
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer">
+                <input type="checkbox" name="features" value={f.value} class="w-4 h-4 rounded text-emerald-500 focus:ring-0 bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700" checked={idx < 5} />
+                <span class="text-xs font-medium text-slate-700 dark:text-slate-200">{f.label}</span>
+              </label>
+            ))}
           </div>
         </div>
 
         <!-- Step 5: Property Details & PIC -->
         <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
           <label class="block text-sm font-bold text-slate-900 dark:text-white mb-4">
-            5. Informasi Properti & Kontak Penanggung Jawab:
+            {t.step5}
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="propertyName" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Nama Properti / Villa / Hotel *</label>
+              <label for="propertyName" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">{t.propNameLabel}</label>
               <input
                 type="text"
                 id="propertyName"
                 name="propertyName"
                 required
-                placeholder="Contoh: The Seminyak Haven Villas"
+                placeholder={lang === 'en' ? 'e.g. The Seminyak Haven Villas' : 'Contoh: The Seminyak Haven Villas'}
                 class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"
               />
             </div>
             <div>
-              <label for="picName" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Nama Owner / General Manager (GM) *</label>
+              <label for="picName" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">{t.picNameLabel}</label>
               <input
                 type="text"
                 id="picName"
                 name="picName"
                 required
-                placeholder="Nama Anda"
+                placeholder={lang === 'en' ? 'Your Name' : 'Nama Anda'}
                 class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"
               />
             </div>
             <div>
-              <label for="propertyLocation" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Lokasi Properti</label>
+              <label for="propertyLocation" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">{t.locationLabel}</label>
               <input
                 type="text"
                 id="propertyLocation"
                 name="propertyLocation"
-                placeholder="Contoh: Badung, Bali / Yogyakarta / Bandung"
+                placeholder={lang === 'en' ? 'e.g. Badung, Bali / Lombok / Bandung' : 'Contoh: Badung, Bali / Yogyakarta / Bandung'}
                 class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"
               />
             </div>
             <div>
-              <label for="currentOtaPlatform" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Kanal Penjualan Saat Ini</label>
+              <label for="currentOtaPlatform" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">{t.channelLabel}</label>
               <input
                 type="text"
                 id="currentOtaPlatform"
                 name="currentOtaPlatform"
-                placeholder="Contoh: Airbnb, Booking.com, Traveloka, Agoda"
+                placeholder={lang === 'en' ? 'e.g. Airbnb, Booking.com, Agoda' : 'Contoh: Airbnb, Booking.com, Traveloka, Agoda'}
                 class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"
               />
             </div>
           </div>
 
           <div class="mt-4">
-            <label for="additionalNotes" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Catatan Tambahan / Kebutuhan Khusus</label>
+            <label for="additionalNotes" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">{t.notesLabel}</label>
             <textarea
               id="additionalNotes"
               name="additionalNotes"
               rows="2"
-              placeholder="Ceritakan kendala operasional, target peluncuran web direct booking, atau kebutuhan integrasi khusus..."
+              placeholder={lang === 'en' 
+                ? 'Tell us about your operational challenges, target launch timeline, or specific integrations...'
+                : 'Ceritakan kendala operasional, target peluncuran web direct booking, atau kebutuhan integrasi khusus...'}
               class="w-full px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:border-emerald-500"
             ></textarea>
           </div>
@@ -224,10 +213,10 @@
               <input type="checkbox" id="applyPilot" name="applyPilot" class="w-4 h-4 rounded text-emerald-600 focus:ring-0 mt-0.5" checked />
               <div>
                 <span class="text-xs font-bold text-emerald-800 dark:text-emerald-300 block">
-                  Ajukan 1 dari 2 Slot Gratis Development (Hospitality Pilot Program — S&K Berlaku)
+                  {t.pilotCheckboxTitle}
                 </span>
                 <span class="text-[11px] text-emerald-700 dark:text-emerald-400">
-                  Bebas biaya pengerjaan 100% dengan timbal balik ulasan testimoni resmi dan publikasi studi kasus.
+                  {t.pilotCheckboxDesc}
                 </span>
               </div>
             </label>
@@ -244,7 +233,7 @@
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 0.742.966 1.201.664.591 1.224.774 1.397.86.173.086.274.072.375-.044.101-.116.433-.505.549-.679.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z" />
             </svg>
-            <span>Kirim Spesifikasi Properti via WhatsApp</span>
+            <span>{t.btnWA}</span>
           </button>
 
           <button
@@ -255,7 +244,7 @@
             <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <span>Kirim via Email Resmi</span>
+            <span>{t.btnEmail}</span>
           </button>
         </div>
 
@@ -272,6 +261,8 @@
 
     if (!form) return;
 
+    const isEn = form.dataset.lang === 'en';
+
     function getFormData() {
       const propertyType = form.querySelector('input[name="propertyType"]:checked')?.value || 'Private Villa';
       const roomCapacity = form.querySelector('input[name="roomCapacity"]:checked')?.value || '1 - 5 Unit';
@@ -282,9 +273,9 @@
 
       const propertyName = document.getElementById('propertyName')?.value.trim() || '';
       const picName = document.getElementById('picName')?.value.trim() || '';
-      const propertyLocation = document.getElementById('propertyLocation')?.value.trim() || 'Indonesia';
-      const currentOtaPlatform = document.getElementById('currentOtaPlatform')?.value.trim() || 'OTA Umum';
-      const additionalNotes = document.getElementById('additionalNotes')?.value.trim() || 'Tidak ada catatan tambahan';
+      const propertyLocation = document.getElementById('propertyLocation')?.value.trim() || (isEn ? 'Indonesia' : 'Indonesia');
+      const currentOtaPlatform = document.getElementById('currentOtaPlatform')?.value.trim() || (isEn ? 'General OTAs' : 'OTA Umum');
+      const additionalNotes = document.getElementById('additionalNotes')?.value.trim() || (isEn ? 'No additional notes' : 'Tidak ada catatan tambahan');
       const applyPilot = document.getElementById('applyPilot')?.checked || false;
 
       return {
@@ -305,19 +296,44 @@
       btnWA.addEventListener('click', () => {
         const data = getFormData();
         if (!data.propertyName || !data.picName) {
-          alert('Mohon isi Nama Properti dan Nama Owner / GM terlebih dahulu.');
+          alert(isEn ? 'Please fill in Property Name and Owner / GM Name first.' : 'Mohon isi Nama Properti dan Nama Owner / GM terlebih dahulu.');
           return;
         }
 
         const featureList = data.features.length > 0 
           ? data.features.map((f, i) => `  ${i+1}. ${f}`).join('\n')
-          : '  - Mengikuti rekomendasi tim Veridion';
+          : (isEn ? '  - Following Veridion lead recommendation' : '  - Mengikuti rekomendasi tim Veridion');
 
         const pilotStatus = data.applyPilot 
-          ? 'YA (Mengajukan Slot Gratis 2 Properti Pertama - S&K Berlaku)' 
-          : 'TIDAK';
+          ? (isEn ? 'YES (Applying for 1 of 2 Free Pilot Slots - T&Cs Apply)' : 'YA (Mengajukan Slot Gratis 2 Properti Pertama - S&K Berlaku)')
+          : (isEn ? 'NO' : 'TIDAK');
 
-        const message = 
+        let message = '';
+        if (isEn) {
+          message = 
+`Hello Veridion Studio Team, I would like to consult on engineering a property system:
+
+🏨 PROPERTY DETAILS:
+• Property Name: ${data.propertyName}
+• Owner / GM: ${data.picName}
+• Location: ${data.propertyLocation}
+• Current Channels: ${data.currentOtaPlatform}
+• Free Pilot Program: ${pilotStatus}
+
+⚙️ SYSTEM SPECIFICATIONS:
+• Property Type: ${data.propertyType}
+• Room Capacity: ${data.roomCapacity}
+• Core Focus: ${data.solutionType}
+
+✨ MODULES REQUIRED:
+${featureList}
+
+📝 Additional Notes:
+${data.additionalNotes}
+
+Looking forward to your guidance on technical roadmap and scheduling. Thank you!`;
+        } else {
+          message = 
 `Halo Tim Veridion Studio, saya ingin berkonsultasi mengenai pembuatan sistem properti berikut:
 
 🏨 DETAIL PROPERTI:
@@ -339,6 +355,7 @@ ${featureList}
 ${data.additionalNotes}
 
 Mohon informasi langkah selanjutnya dan estimasi jadwal pengerjaannya. Terima kasih!`;
+        }
 
         const waNumber = '6282322370126';
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
@@ -350,12 +367,37 @@ Mohon informasi langkah selanjutnya dan estimasi jadwal pengerjaannya. Terima ka
       btnEmail.addEventListener('click', () => {
         const data = getFormData();
         if (!data.propertyName || !data.picName) {
-          alert('Mohon isi Nama Properti dan Nama Owner / GM terlebih dahulu.');
+          alert(isEn ? 'Please fill in Property Name and Owner / GM Name first.' : 'Mohon isi Nama Properti dan Nama Owner / GM terlebih dahulu.');
           return;
         }
 
-        const subject = encodeURIComponent(`[Konsultasi Properti] ${data.propertyName} - ${data.solutionType}`);
-        const body = encodeURIComponent(
+        const subject = encodeURIComponent(
+          isEn 
+            ? `[Property Consultation] ${data.propertyName} - ${data.solutionType}`
+            : `[Konsultasi Properti] ${data.propertyName} - ${data.solutionType}`
+        );
+
+        let body = '';
+        if (isEn) {
+          body = encodeURIComponent(
+`Hello Veridion Studio Team,
+
+Property Name: ${data.propertyName}
+Owner / GM: ${data.picName}
+Location: ${data.propertyLocation}
+Current Channels: ${data.currentOtaPlatform}
+
+Property Type: ${data.propertyType}
+Capacity: ${data.roomCapacity}
+Core Focus: ${data.solutionType}
+Modules: ${data.features.join(', ')}
+Free Pilot Program: ${data.applyPilot ? 'Yes' : 'No'}
+
+Notes:
+${data.additionalNotes}`
+          );
+        } else {
+          body = encodeURIComponent(
 `Halo Tim Veridion Studio,
 
 Nama Properti: ${data.propertyName}
@@ -371,7 +413,9 @@ Program Pilot Gratis: ${data.applyPilot ? 'Ya' : 'Tidak'}
 
 Catatan:
 ${data.additionalNotes}`
-        );
+          );
+        }
+
         window.location.href = `mailto:verdionstudio@gmail.com?subject=${subject}&body=${body}`;
       });
     }

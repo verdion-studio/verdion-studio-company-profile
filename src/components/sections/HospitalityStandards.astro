@@ -1,24 +1,34 @@
 ---
 import { hospitalityTechStandards } from '../../data/content';
+import { hospitalityTechStandardsEn } from '../../data/content-en';
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].standards;
+const standards = lang === 'en' ? hospitalityTechStandardsEn : hospitalityTechStandards;
 ---
 
 <section id="arsitektur-teknologi" class="py-20 md:py-28 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-300 dark:border-cyan-500/30 text-cyan-800 dark:text-cyan-400 text-xs font-semibold mb-3">
-        <span>Kredibilitas & Standar Rekayasa Perhotelan</span>
+        <span>{t.badge}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Arsitektur Teknologi Properti Modern & Berstandar Tinggi
+        {t.title}
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Kami merancang setiap baris kode dengan pemahaman mendalam atas alur operasional perhotelan, kenyamanan tamu VIP, serta keamanan arus kas pemilik properti.
+        {t.desc}
       </p>
     </div>
 
     <!-- Grid Standards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {hospitalityTechStandards.map((item, idx) => (
+      {standards.map((item, idx) => (
         <div class="rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 p-7 hover:border-emerald-500/50 hover:shadow-xl dark:hover:bg-slate-900 transition-all duration-300 flex flex-col justify-between shadow-sm group">
           <div>
             <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500/10 to-cyan-500/10 dark:from-emerald-500/20 dark:to-cyan-500/20 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg mb-5 group-hover:scale-105 transition-transform">
@@ -64,7 +74,7 @@ import { hospitalityTechStandards } from '../../data/content';
           </div>
 
           <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-            <span>Standar Hospitality Teruji</span>
+            <span>{t.tagline}</span>
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
           </div>
         </div>
@@ -75,13 +85,13 @@ import { hospitalityTechStandards } from '../../data/content';
     <div class="mt-14 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 p-8 sm:p-10 border border-slate-800 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
       <div class="space-y-2 text-center md:text-left">
         <span class="px-2.5 py-1 text-[11px] font-bold rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-          KEAMANAN DATA & FINANSIAL
+          {t.bannerBadge}
         </span>
         <h4 class="text-xl sm:text-2xl font-bold">
-          Bebas Ketergantungan Software House Umum yang Tidak Mengerti Hospitality
+          {t.bannerTitle}
         </h4>
         <p class="text-sm text-slate-400 max-w-2xl">
-          Kami bukan software house serba-bisa yang membuat sistem asal-asalan. Fokus kami 100% tertuju pada ekosistem akomodasi perhotelan, villa, dan resort.
+          {t.bannerDesc}
         </p>
       </div>
 
@@ -89,7 +99,7 @@ import { hospitalityTechStandards } from '../../data/content';
         href="#request-builder"
         class="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
       >
-        <span>Konsultasikan Properti Anda</span>
+        <span>{t.bannerCta}</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>

@@ -1,24 +1,34 @@
 ---
 import { workingSteps } from '../../data/content';
+import { workingStepsEn } from '../../data/content-en';
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].howWeWork;
+const steps = lang === 'en' ? workingStepsEn : workingSteps;
 ---
 
 <section id="cara-kerja" class="py-20 md:py-28 relative bg-slate-100/60 dark:bg-slate-950/60 border-y border-slate-200 dark:border-slate-900 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-300 dark:border-cyan-500/30 text-cyan-800 dark:text-cyan-400 text-xs font-semibold mb-3">
-        <span>Transparansi Implementasi</span>
+        <span>{t.badge}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        4 Tahap Go-Live Sistem Properti Anda
+        {t.title}
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Bekerja bersama Veridion Studio bebas dari birokrasi berbelit-belit. Anda berdiskusi langsung dengan tech lead dari awal audit alur reservasi hingga staf resepsionis lancar menerima tamu.
+        {t.desc}
       </p>
     </div>
 
     <!-- Steps Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-      {workingSteps.map((item, index) => (
+      {steps.map((item) => (
         <div class="group relative rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 hover:border-emerald-500/50 hover:shadow-xl dark:hover:bg-slate-900 transition-all duration-300 flex flex-col justify-between shadow-sm">
           <div>
             <!-- Step Number Badge -->
@@ -42,7 +52,7 @@ import { workingSteps } from '../../data/content';
 
           <!-- Deliverable Tag -->
           <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80">
-            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Hasil Nyata:</p>
+            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">{t.deliverableLabel}</p>
             <p class="text-xs font-semibold text-emerald-700 dark:text-emerald-400 leading-snug">
               ✓ {item.deliverable}
             </p>
@@ -55,10 +65,10 @@ import { workingSteps } from '../../data/content';
     <div class="mt-12 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
       <div class="space-y-1 text-center sm:text-left">
         <h4 class="text-base font-bold text-slate-900 dark:text-white">
-          Ingin mendiskusikan kendala alur booking atau sinkronisasi kalender properti Anda?
+          {t.bannerTitle}
         </h4>
         <p class="text-xs text-slate-600 dark:text-slate-400">
-          Konsultasi teknis 100% gratis. Kami bantu petakan modul yang paling mendesak untuk meningkatkan margin hotel/villa Anda.
+          {t.bannerDesc}
         </p>
       </div>
 
@@ -66,7 +76,7 @@ import { workingSteps } from '../../data/content';
         href="#request-builder"
         class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
       >
-        <span>Mulai Konsultasi Properti</span>
+        <span>{t.bannerCta}</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>

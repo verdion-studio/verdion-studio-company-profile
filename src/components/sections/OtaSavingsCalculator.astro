@@ -1,22 +1,36 @@
 ---
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].calc;
 ---
 
 <section id="kalkulator-roi" class="py-20 md:py-28 relative bg-gradient-to-b from-slate-50 via-emerald-50/40 to-slate-50 dark:from-[#0B0F19] dark:via-emerald-950/20 dark:to-[#0B0F19] border-y border-emerald-500/20 transition-colors duration-300">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-14">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-semibold mb-3">
-        <span>Simulasi Nilai Bisnis & Profitabilitas</span>
+        <span>{t.badge}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Kalkulator Penghematan Komisi OTA & ROI Properti
+        {t.title}
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Berapa banyak profit yang terbuang ke komisi 18% OTA (Airbnb, Agoda, Booking.com) setiap bulan? Hitung sendiri potensi margin yang dapat Anda selamatkan dengan Direct Booking Engine mandiri.
+        {t.desc}
       </p>
     </div>
 
     <!-- Calculator Card -->
-    <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden transition-colors">
+    <div
+      id="otaCalcContainer"
+      data-unit-single={lang === 'en' ? 'Unit' : 'Unit'}
+      data-unit-plural={lang === 'en' ? 'Units' : 'Unit'}
+      data-per-year={lang === 'en' ? '/ Year' : '/ Tahun'}
+      class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden transition-colors"
+    >
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <!-- Controls Left (7 Cols) -->
@@ -26,9 +40,9 @@
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <label for="roomCount" class="text-sm font-bold text-slate-900 dark:text-white">
-                Jumlah Kamar / Unit Villa
+                {t.roomsLabel}
               </label>
-              <span id="roomCountLabel" class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">8 Unit</span>
+              <span id="roomCountLabel" class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">8 {lang === 'en' ? 'Units' : 'Unit'}</span>
             </div>
             <input
               type="range"
@@ -40,9 +54,9 @@
               class="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-200 dark:bg-slate-700 rounded-lg"
             />
             <div class="flex justify-between text-[11px] text-slate-400">
-              <span>1 Unit (Private Villa)</span>
-              <span>20 Unit</span>
-              <span>40+ Unit (Hotel/Resort)</span>
+              <span>{t.roomsHint1}</span>
+              <span>{t.roomsHint2}</span>
+              <span>{t.roomsHint3}</span>
             </div>
           </div>
 
@@ -50,7 +64,7 @@
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <label for="adrRate" class="text-sm font-bold text-slate-900 dark:text-white">
-                Rata-rata Tarif Per Malam (ADR)
+                {t.adrLabel}
               </label>
               <span id="adrRateLabel" class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">Rp 850.000</span>
             </div>
@@ -66,7 +80,7 @@
             <div class="flex justify-between text-[11px] text-slate-400">
               <span>Rp 200 Rb</span>
               <span>Rp 2,5 Jt</span>
-              <span>Rp 5 Jt+ (Luxury Villa)</span>
+              <span>Rp 5 Jt+ (Luxury)</span>
             </div>
           </div>
 
@@ -74,7 +88,7 @@
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <label for="occupancyRate" class="text-sm font-bold text-slate-900 dark:text-white">
-                Tingkat Okupansi Rata-rata Bulanan
+                {t.occLabel}
               </label>
               <span id="occupancyRateLabel" class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">70%</span>
             </div>
@@ -98,7 +112,7 @@
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <label for="otaShare" class="text-sm font-bold text-slate-900 dark:text-white">
-                Porsi Tamu yang Masuk via OTA (Saat Ini)
+                {t.otaLabel}
               </label>
               <span id="otaShareLabel" class="text-base font-extrabold text-cyan-600 dark:text-cyan-400">80% via OTA</span>
             </div>
@@ -114,7 +128,7 @@
             <div class="flex justify-between text-[11px] text-slate-400">
               <span>20% OTA</span>
               <span>50% OTA</span>
-              <span>100% Ketergantungan OTA</span>
+              <span>100% OTA</span>
             </div>
           </div>
 
@@ -125,32 +139,32 @@
           <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 text-white p-7 sm:p-8 border border-emerald-500/30 shadow-xl space-y-6">
             <div>
               <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">
-                Estimasi Komisi OTA Terbuang:
+                {t.lossTitle}
               </span>
               <p id="monthlyOtaFee" class="text-3xl sm:text-4xl font-extrabold text-red-400 mt-1">
                 Rp 20.563.200
               </p>
               <p class="text-xs text-slate-400 mt-1">
-                Potongan komisi rata-rata 18% dari OTA setiap bulan.
+                {t.lossDesc}
               </p>
             </div>
 
             <div class="pt-4 border-t border-slate-800">
               <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">
-                Potensi Penghematan Tahunan:
+                {t.savingsTitle}
               </span>
               <p id="yearlySavings" class="text-2xl sm:text-3xl font-extrabold text-emerald-400 mt-1">
-                Rp 246.758.400 / Tahun
+                Rp 246.758.400 {lang === 'en' ? '/ Year' : '/ Tahun'}
               </p>
               <p class="text-xs text-slate-300 mt-1">
-                Nilai profit bersih yang kembali ke kantong pemilik properti dengan sistem Direct Booking mandiri.
+                {t.savingsDesc}
               </p>
             </div>
 
             <div class="pt-2">
               <div class="p-3.5 rounded-xl bg-emerald-950/50 border border-emerald-500/30 text-xs text-emerald-200">
-                <span class="font-bold">✓ 100% Pembayaran Masuk ke Rekening Anda</span>
-                <p class="text-[11px] text-slate-300 mt-0.5">Tanpa fee transaksi per pemesanan, tanpa penahanan dana, dan data kontak tamu milik Anda seutuhnya.</p>
+                <span class="font-bold">{t.directDeposit}</span>
+                <p class="text-[11px] text-slate-300 mt-0.5">{t.directDepositDesc}</p>
               </div>
             </div>
 
@@ -159,7 +173,7 @@
                 href="#request-builder"
                 class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
-                <span>Selamatkan Margin Properti Saya</span>
+                <span>{t.ctaSave}</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -174,7 +188,7 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                <span>Lihat Contoh Penerapannya di Aura Haven</span>
+                <span>{t.ctaDemo}</span>
               </a>
             </div>
           </div>
@@ -187,6 +201,7 @@
 
 <script is:inline>
   function setupOtaCalculator() {
+    const container = document.getElementById('otaCalcContainer');
     const roomInput = document.getElementById('roomCount');
     const adrInput = document.getElementById('adrRate');
     const occupancyInput = document.getElementById('occupancyRate');
@@ -202,6 +217,10 @@
 
     if (!roomInput || !adrInput || !occupancyInput || !otaShareInput) return;
 
+    const unitSingle = container ? container.dataset.unitSingle || 'Unit' : 'Unit';
+    const unitPlural = container ? container.dataset.unitPlural || 'Unit' : 'Unit';
+    const perYearText = container ? container.dataset.perYear || '/ Tahun' : '/ Tahun';
+
     function formatRupiah(num) {
       return 'Rp ' + Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
@@ -213,7 +232,8 @@
       const otaPercent = parseInt(otaShareInput.value, 10) / 100;
 
       // Update Labels
-      roomLabel.textContent = `${rooms} Unit`;
+      const unitLabel = rooms === 1 ? unitSingle : unitPlural;
+      roomLabel.textContent = `${rooms} ${unitLabel}`;
       adrLabel.textContent = formatRupiah(adr);
       occupancyLabel.textContent = `${Math.round(occPercent * 100)}%`;
       otaShareLabel.textContent = `${Math.round(otaPercent * 100)}% via OTA`;
@@ -229,7 +249,7 @@
       const yearlySavings = monthlyOtaLoss * 12;
 
       monthlyFeeEl.textContent = formatRupiah(monthlyOtaLoss);
-      yearlySavingsEl.textContent = `${formatRupiah(yearlySavings)} / Tahun`;
+      yearlySavingsEl.textContent = `${formatRupiah(yearlySavings)} ${perYearText}`;
     }
 
     roomInput.addEventListener('input', calculate);

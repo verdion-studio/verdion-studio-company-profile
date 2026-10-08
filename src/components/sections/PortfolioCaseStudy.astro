@@ -1,5 +1,14 @@
 ---
-import { portfolioData, portfolioLinks } from '../../data/content';
+import { portfolioData } from '../../data/content';
+import { portfolioDataEn } from '../../data/content-en';
+import type { Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const items = lang === 'en' ? portfolioDataEn : portfolioData;
 ---
 
 <section id="portofolio" class="py-24 md:py-32 relative overflow-hidden">
@@ -13,16 +22,18 @@ import { portfolioData, portfolioLinks } from '../../data/content';
         <span>PROVEN HOSPITALITY ARCHITECTURE</span>
       </div>
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Studi Kasus & Ekosistem Properti Nyata
+        {lang === 'en' ? 'Case Studies & Proven Hospitality Ecosystem' : 'Studi Kasus & Ekosistem Properti Nyata'}
       </h2>
       <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-        Jelajahi portofolio solusi hospitality yang kami rekayasa — dari Direct Booking Engine villa mewah, Cloud PMS front desk, hingga sistem kasir beach club & reservasi glamping.
+        {lang === 'en' 
+          ? 'Explore our specialized hospitality software portfolio — from high-converting villa direct booking engines and cloud PMS to beach club POS and glamping reservation systems.' 
+          : 'Jelajahi portofolio solusi hospitality yang kami rekayasa — dari Direct Booking Engine villa mewah, Cloud PMS front desk, hingga sistem kasir beach club & reservasi glamping.'}
       </p>
     </div>
 
     <!-- Portfolio Cards Stack -->
     <div class="space-y-12 lg:space-y-16">
-      {portfolioData.map((item, idx) => (
+      {items.map((item) => (
         <div class="group rounded-3xl bg-white dark:bg-[#0B0F19]/90 border border-slate-200 dark:border-slate-800/80 p-7 sm:p-10 lg:p-12 shadow-xl dark:shadow-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden backdrop-blur-sm">
           
           <!-- Top Card Glow -->
@@ -57,7 +68,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                   {item.title}
                 </h3>
                 <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 dark:text-slate-400 mt-1.5">
-                  Properti: <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{item.client}</strong>
+                  {lang === 'en' ? 'Property:' : 'Properti:'} <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{item.client}</strong>
                 </p>
                 <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                   {item.description}
@@ -66,7 +77,9 @@ import { portfolioData, portfolioLinks } from '../../data/content';
 
               <!-- Impact Highlight Box -->
               <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/70 to-teal-50/40 dark:from-emerald-950/30 dark:to-teal-950/20 border border-emerald-200/80 dark:border-emerald-500/20">
-                <p class="text-[11px] uppercase tracking-widest font-extrabold text-emerald-700 dark:text-emerald-400">Dampak Finansial & Operasional:</p>
+                <p class="text-[11px] uppercase tracking-widest font-extrabold text-emerald-700 dark:text-emerald-400">
+                  {lang === 'en' ? 'Financial & Operational Impact:' : 'Dampak Finansial & Operasional:'}
+                </p>
                 <p class="text-sm sm:text-base font-bold text-slate-900 dark:text-emerald-200 mt-1 leading-snug">
                   "{item.impact}"
                 </p>
@@ -74,7 +87,9 @@ import { portfolioData, portfolioLinks } from '../../data/content';
 
               <!-- Features Grid -->
               <div>
-                <p class="text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-3">Modul Rekayasa Utama:</p>
+                <p class="text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-3">
+                  {lang === 'en' ? 'Core Architectural Modules:' : 'Modul Rekayasa Utama:'}
+                </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {item.features.map((feat) => (
                     <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
@@ -103,7 +118,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span>Buka Live Demo Aura Haven Villa Direct</span>
+                      <span>{lang === 'en' ? 'Launch Live Demo: Aura Haven Villa' : 'Buka Live Demo Aura Haven Villa Direct'}</span>
                       <svg class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -113,7 +128,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                       href="#request-builder"
                       class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
                     >
-                      <span>Ajukan Direct Booking untuk Villa Anda</span>
+                      <span>{lang === 'en' ? 'Request Direct Booking for Your Villa' : 'Ajukan Direct Booking untuk Villa Anda'}</span>
                     </a>
                   </>
                 )}
@@ -124,14 +139,16 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                       href="#request-builder"
                       class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn"
                     >
-                      <span>Ajukan Sistem untuk Properti Anda</span>
+                      <span>{lang === 'en' ? 'Request System for Your Property' : 'Ajukan Sistem untuk Properti Anda'}</span>
                       <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
 
                     <a
-                      href={`https://wa.me/6282322370126?text=Halo%20Tim%20Veridion,%20saya%20tertarik%20dengan%20sistem%20${encodeURIComponent(item.title)}`}
+                      href={lang === 'en' 
+                        ? `https://wa.me/6282322370126?text=Hello%20Veridion%20Team,%20I%20am%20interested%20in%20the%20${encodeURIComponent(item.title)}%20system` 
+                        : `https://wa.me/6282322370126?text=Halo%20Tim%20Veridion,%20saya%20tertarik%20dengan%20sistem%20${encodeURIComponent(item.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
@@ -139,7 +156,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                       <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 0.742.966 1.201.664.591 1.224.774 1.397.86.173.086.274.072.375-.044.101-.116.433-.505.549-.679.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z" />
                       </svg>
-                      <span>Tanya Alur Teknis via WA</span>
+                      <span>{lang === 'en' ? 'Discuss Tech via WA' : 'Tanya Alur Teknis via WA'}</span>
                     </a>
                   </>
                 )}
@@ -175,7 +192,9 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                   <span>{item.activeStatus}</span>
                 </div>
                 <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Arsitektur modular siap dikonfigurasi dengan logo, warna tema, foto kamar, dan aturan pemesanan khusus properti Anda.
+                  {lang === 'en' 
+                    ? 'Modular architecture ready to deploy with custom branding, color palettes, unit galleries, and property-specific booking rules.'
+                    : 'Arsitektur modular siap dikonfigurasi dengan logo, warna tema, foto kamar, dan aturan pemesanan khusus properti Anda.'}
                 </p>
               </div>
 

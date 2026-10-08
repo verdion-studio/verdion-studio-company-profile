@@ -4,16 +4,18 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  lang?: string;
 }
 
 const {
   title = "Veridion Studio | Hospitality Tech Studio — Direct Booking Engine & Cloud PMS",
-  description = "Veridion Studio: Solusi software hospitality kustom untuk Boutique Hotel, Luxury Villa, dan Eco-Resort. Direct Booking Engine mandiri tanpa komisi OTA 15-20%, 2-Way iCal Sync, Cloud PMS Front Desk, dan WhatsApp Concierge."
+  description = "Veridion Studio: Solusi software hospitality kustom untuk Boutique Hotel, Luxury Villa, dan Eco-Resort. Direct Booking Engine mandiri tanpa komisi OTA 15-20%, 2-Way iCal Sync, Cloud PMS Front Desk, dan WhatsApp Concierge.",
+  lang = "id"
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

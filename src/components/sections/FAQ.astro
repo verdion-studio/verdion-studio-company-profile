@@ -1,24 +1,34 @@
 ---
 import { faqs } from '../../data/content';
+import { faqsEn } from '../../data/content-en';
+import { ui, type Language } from '../../i18n/ui';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'id' } = Astro.props;
+const t = ui[lang].faq;
+const faqItems = lang === 'en' ? faqsEn : faqs;
 ---
 
 <section id="faq" class="py-20 md:py-28 relative">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-semibold mb-3">
-        <span>Tanya Jawab Seputar Sistem Properti</span>
+        <span>{t.badge}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Pertanyaan Umum dari Pemilik Villa & Hotelier
+        {t.title}
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Transparansi penuh mengenai sinkronisasi kalender, alur pembayaran tamu, dan garansi operasional sistem properti Anda.
+        {t.desc}
       </p>
     </div>
 
     <!-- Accordion List -->
     <div class="space-y-4">
-      {faqs.map((item, index) => (
+      {faqItems.map((item) => (
         <details class="group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 p-6 transition-all duration-200 shadow-sm open:border-emerald-500/50 open:shadow-md">
           <summary class="flex items-center justify-between cursor-pointer list-none select-none font-bold text-slate-900 dark:text-white group-open:text-emerald-600 dark:group-open:text-emerald-400 text-base sm:text-lg">
             <span class="pr-6">{item.q}</span>
@@ -37,9 +47,9 @@ import { faqs } from '../../data/content';
 
     <!-- Contact Fallback -->
     <div class="mt-12 text-center text-xs text-slate-500">
-      <span>Punya pertanyaan spesifik mengenai integrasi properti Anda?</span>
-      <a href="https://wa.me/6282322370126" target="_blank" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline ml-1">
-        Tanyakan langsung via WhatsApp (0823-2237-0126) →
+      <span>{t.fallbackText}</span>
+      <a href="https://wa.me/6282322370126" target="_blank" rel="noopener noreferrer" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline ml-1">
+        {t.fallbackLink}
       </a>
     </div>
 
