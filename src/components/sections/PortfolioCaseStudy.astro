@@ -6,13 +6,13 @@ import { portfolioData, portfolioLinks } from '../../data/content';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-semibold mb-3">
-        <span>Bukan Sekadar Mockup Desain</span>
+        <span>Rekayasa Teruji & Siap Pakai</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Studi Kasus & Produk Portofolio Nyata
+        Studi Kasus & Arsitektur Sistem Properti
       </h2>
       <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Jelajahi solusi software yang kami kembangkan — mulai dari sistem kasir operasional cafe dengan demo interaktif hingga sistem enterprise B2B yang aktif digunakan perusahaan.
+        Jelajahi portofolio solusi hospitality yang kami rancang — mulai dari Direct Booking Engine villa mewah, Cloud PMS resort terintegrasi housekeeping, hingga sistem kasir lounge hotel.
       </p>
     </div>
 
@@ -31,15 +31,14 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                   {item.category}
                 </span>
 
-                {item.isInteractiveDemo ? (
+                <span class="px-3 py-1 text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg border border-slate-200 dark:border-slate-700">
+                  {item.propertyType}
+                </span>
+
+                {item.isInteractiveDemo && (
                   <span class="flex items-center gap-1.5 text-xs font-bold text-cyan-700 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-300 dark:border-cyan-500/40 px-3 py-1 rounded-lg">
                     <span class="w-2 h-2 rounded-full bg-cyan-500 animate-ping"></span>
                     Live Interactive Demo
-                  </span>
-                ) : (
-                  <span class="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-3 py-1 rounded-lg">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
-                    {item.activeStatus}
                   </span>
                 )}
               </div>
@@ -79,7 +78,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
 
               <!-- Action Buttons -->
               <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                {item.id === 'coffee-stand-pos' ? (
+                {item.id === 'coffee-stand-pos' && (
                   <>
                     <a
                       href="https://coffee-stand-demo.netlify.app/"
@@ -91,7 +90,7 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span>Buka Live Demo Coffee Stand POS</span>
+                      <span>Coba Live Demo POS Lounge</span>
                       <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -101,10 +100,12 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                       href="#request-builder"
                       class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
                     >
-                      <span>Ajukan Custom POS Cafe Anda</span>
+                      <span>Ajukan Custom POS Resto/Bar</span>
                     </a>
                   </>
-                ) : (
+                )}
+
+                {item.id === 'pelangi-efrata-supply' && (
                   <>
                     <a
                       href={portfolioLinks.pelangiWebLiveUrl}
@@ -122,28 +123,50 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                       href="#request-builder"
                       class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
                     >
-                      <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      <span>Konsultasi Sistem Suplai Logistik</span>
+                    </a>
+                  </>
+                )}
+
+                {(item.id === 'aura-haven-villa-pms' || item.id === 'lumina-resort-pms-concierge') && (
+                  <>
+                    <a
+                      href="#request-builder"
+                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group"
+                    >
+                      <span>Ajukan Sistem Serupa untuk Properti Anda</span>
+                      <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                      <span>Ajukan Sesi Demo Live POS Enterprise</span>
+                    </a>
+
+                    <a
+                      href="https://wa.me/6282322370126?text=Halo%20Tim%20Veridion,%20saya%20tertarik%20dengan%20studi%20kasus%20" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
+                    >
+                      <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 0.742.966 1.201.664.591 1.224.774 1.397.86.173.086.274.072.375-.044.101-.116.433-.505.549-.679.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z" />
+                      </svg>
+                      <span>Tanya Alur Teknis via WA</span>
                     </a>
                   </>
                 )}
               </div>
 
-              {item.id === 'pelangi-efrata-pos-web' && (
-                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-xs space-y-1.5">
-                  <div class="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold">
-                    <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    <span>Privasi Kode Sumber & Keamanan Data Perusahaan:</span>
-                  </div>
-                  <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {portfolioLinks.posNotice} Repositori sistem kasir bersifat tertutup (*private enterprise*) demi menjamin kerahasiaan data pembukuan klien.
-                  </p>
+              <!-- Notice Box -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-xs space-y-1.5">
+                <div class="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold">
+                  <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span>Status Sistem: {item.activeStatus}</span>
                 </div>
-              )}
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Semua arsitektur di atas dibangun dengan standar modular (Tailwind, Astro/Next.js, Node/Serverless) sehingga dapat langsung diadaptasi dengan brand identity, foto, dan struktur tarif properti Anda.
+                </p>
+              </div>
 
               <!-- Tags -->
               <div class="flex flex-wrap gap-2 pt-1">
@@ -168,40 +191,23 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                 ))}
               </div>
 
-              <!-- Dynamic Feature Box per Item -->
-              {item.id === 'coffee-stand-pos' ? (
-                <div class="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/20 shadow-sm">
-                  <div class="flex items-start gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-sm font-bold text-slate-900 dark:text-white">Responsive & Offline-First POS</p>
-                      <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Didesain fleksibel untuk perangkat Android tablet dan HP biasa tanpa ketergantungan hardware mahal. Transaksi tetap berjalan meski koneksi internet stand kopi sedang lambat.
-                      </p>
-                    </div>
+              <!-- Highlight Card -->
+              <div class="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/20 shadow-sm">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-sm font-bold text-slate-900 dark:text-white">Implementasi Langsung Tanpa Agen Pihak Ketiga</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                      Sistem terhubung langsung ke domain resmi properti Anda, dengan hak milik 100% atas data riwayat tamu untuk strategi direct booking berikutnya.
+                    </p>
                   </div>
                 </div>
-              ) : (
-                <div class="p-5 rounded-2xl bg-cyan-50 dark:bg-cyan-950/20 border border-cyan-200 dark:border-cyan-500/20 shadow-sm">
-                  <div class="flex items-start gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-100 dark:bg-cyan-500/10 flex items-center justify-center text-cyan-600 dark:text-cyan-400 shrink-0">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div class="space-y-1">
-                      <p class="text-sm font-bold text-slate-900 dark:text-white">Live System Demo via Secure Tunnel</p>
-                      <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Ingin melihat langsung cara kerja kasir POS enterprise, alur transaksi, cetak struk, dan rekap stoknya? Kami dapat menghubungkan live tunnel interaktif saat sesi diskusi/konsultasi proyek Anda.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
+              </div>
+
             </div>
           </div>
         </div>

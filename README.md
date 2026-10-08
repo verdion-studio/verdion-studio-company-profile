@@ -1,36 +1,45 @@
-# Veridion Studio — Independent Tech Studio Platform
+# Veridion Studio — Hospitality Tech Studio Platform
 
-Platform web resmi **Veridion Studio**, Independent Tech Studio yang berfokus membantu transformasi digital untuk UMKM, Cafe & Resto, Apotek, dan Industri Perhotelan di Indonesia melalui software kustom, Point of Sale (POS) cerdas, dan website bisnis modern.
+Platform web resmi **Veridion Studio**, Dedicated Hospitality Tech Studio yang berfokus membantu transformasi digital untuk **Boutique Hotels, Luxury Private Villas, Eco-Resorts, Glamping, dan Hospitality F&B/Lounges** di Indonesia.
 
-Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang berfokus penuh pada **SEO (Search Engine Optimization)** maksimal, kecepatan akses instan, zero-database, serta fitur Lead Generation interaktif.
+Kami membantu pemilik properti dan hotelier menghentikan ketergantungan berlebihan pada komisi OTA 15–20% (Airbnb, Agoda, Booking.com) melalui rekayasa **Direct Booking Engine mandiri, 2-Way iCal Calendar Sync, Cloud PMS Front Desk, WhatsApp Guest Concierge, dan Folio Billing terintegrasi**.
+
+Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang berkinerja kilat, SEO Google optimal, zero-database vulnerabilities, serta fitur interaktif Lead Generation.
 
 ---
 
-## 🚀 Fitur Utama Platform
+## 🚀 Fitur Unggulan Platform Hospitality
 
-1. **Branding & Positioning "Independent Tech Studio"**:
-   - Menghilangkan stigma bahwa software custom itu mahal, lama, dan rumit bagi pemilik usaha lokal.
-   - Keunggulan kompetitif: **Konsultasi langsung dengan lead developer tanpa perantara sales/birokrasi korporat**.
+1. **Brand Positioning "Hospitality Tech Studio"**:
+   - Berfokus 100% pada ekosistem akomodasi perhotelan, villa mewah, dan resort.
+   - Keunggulan: **Diskusi teknis langsung dengan lead developer tanpa perantara sales/birokrasi korporat**.
    - Dilengkapi dukungan **Light Mode & Dark Mode** interaktif dengan transisi halus dan anti-flash script.
 
-2. **Showcase Portofolio & Produk Nyata**:
-   - **CV Pelangi Efrata**: Sistem Enterprise POS kasir operasional harian terintegrasi web profil perusahaan resmi ([Live Web Portal](https://euphonious-liger-9f90e3.netlify.app/)).
-   - **Coffee Stand POS**: Smart POS & Barista Ordering System khusus kedai kopi dengan kustomisasi minuman (suhu, level gula, ekstra shot), kalkulator kembalian cepat, dan cetak struk thermal 58mm ([Live Demo Hub](https://coffee-stand-demo.netlify.app/)).
-   - **Enterprise Notice**: Framing profesional alasan repositori sistem POS privat demi keamanan data finansial klien.
+2. **Kalkulator Penghematan Komisi OTA & ROI Properti (Interactive Widget)**:
+   - Hotelier dan pemilik villa dapat menggeser slider jumlah kamar, ADR (Average Daily Rate), okupansi, dan persentase OTA.
+   - Sistem secara real-time menghitung kebocoran komisi 18% OTA bulanan dan estimasi profit bersih yang diselamatkan setiap tahunnya.
 
-3. **Transparansi Alur Kerja (How We Work)**:
-   - 4 tahapan pengerjaan transparan: Konsultasi Tanpa Sales $\to$ Prototipe Alur Staf $\to$ Uji Coba Hardware Nyata $\to$ Pelatihan Kasir & Garansi Bug.
+3. **Portofolio & Studi Kasus Hospitality Terpercaya**:
+   - **Aura Haven Luxury Villas**: Direct Booking Engine & Multi-Channel PMS dengan iCal sync 2-arah dan WhatsApp concierge (hemat komisi OTA Rp 28,4 Jt/bulan).
+   - **Lumina Eco-Resort & Suites**: Cloud PMS Front Desk, Housekeeping mobile updater, dan QR Room Service tertaut langsung ke Folio Tagihan Kamar.
+   - **Hotel Lounge & Stand Barista POS**: Live interactive touch POS demo untuk outlet F&B/Lounge hotel dengan QRIS dan cetak struk thermal 58mm ([Live Demo Hub](https://coffee-stand-demo.netlify.app/)).
+   - **CV Pelangi Efrata**: Sistem supply chain logistik & distribusi amenities hotel operasional nyata ([Live Web Portal](https://euphonious-liger-9f90e3.netlify.app/)).
 
-4. **FAQ Interaktif**:
-   - Menjawab pertanyaan kritis pemilik usaha seputar kompatibilitas HP/tablet biasa, kapabilitas kasir saat internet mati (*offline-ready*), garansi perbaikan, dan ketiadaan biaya langganan bulanan tersembunyi.
+4. **Standar Rekayasa & Kepatuhan Software Properti**:
+   - **Zero OTA Commission**: Pembayaran tamu 100% langsung masuk ke rekening bank pemilik properti via Midtrans / Xendit.
+   - **2-Way iCal Multi-Channel Sync**: Cegah 100% risiko double-booking dengan Airbnb & Booking.com.
+   - **Guest WhatsApp Concierge**: Notifikasi otomatis berisi panduan check-in, titik GPS, aturan villa, dan WiFi pass.
+   - **Front Desk & Housekeeping Grid**: Ringan diakses via tablet/HP tanpa biaya perangkat keras mahal.
+   - **Room Folio Billing & Night Audit**: Rekapitulasi tagihan minibar/resto ke kamar dan laporan pajak daerah PB1 (10%).
+   - **Direct CRM Database**: Kepemilikan penuh nomor WA & data histori tamu untuk repeat booking.
 
-5. **Program Early Partner (Gratis Biaya Development 3 Klien Pertama)**:
-   - Program kemitraan percontohan tanpa biaya pengerjaan (*free development fee*) untuk 3 bisnis aktif pertama dengan timbal balik publikasi studi kasus.
+5. **Hospitality Pilot Program (Gratis Biaya Development untuk 3 Properti Pertama)**:
+   - Program kemitraan percontohan tanpa biaya jasa pengerjaan (*free development fee*) untuk 3 villa/hotel aktif pertama.
    - Dilengkapi *Live Slot Tracker* (3/3 kuota tersedia).
 
-6. **Interactive App Request Wizard**:
-   - Calon klien dapat memilih sektor usaha, jenis solusi, dan modul fitur spesifik.
-   - Otomatis merangkum spesifikasi proyek menjadi format teks terstruktur rapi untuk diajukan via **Direct WhatsApp** atau **Email Resmi**.
+6. **Interactive Property Spec Builder**:
+   - Memandu calon klien memilih tipe properti, jumlah unit, solusi utama, dan modul spesifik.
+   - Menghasilkan ringkasan kebutuhan sistem terstruktur yang dapat dikirim langsung ke WhatsApp atau Email tim Veridion Studio.
 
 ---
 
@@ -38,8 +47,8 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
 
 - **Framework**: [Astro](https://astro.build/) (v5+) — Static Site Generation (SSG), Zero JavaScript by default.
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4+) via `@tailwindcss/vite` dengan custom dark variant.
-- **Icons**: Lucide Icons & Custom SVG Vector.
-- **Hosting / Deployment**: Netlify (Drag & Drop Static Deploy / CI).
+- **Icons**: Lucide Icons & Custom SVG Vectors.
+- **Hosting / Deployment**: Netlify (Drag & Drop Static Deploy / Git CI).
 
 ---
 
@@ -60,56 +69,30 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    ```bash
    npm run dev
    ```
-   Buka `http://localhost:4321` di browser Anda.
+   Akses di browser: `http://localhost:4321`
 
-4. **Build untuk produksi**:
+4. **Build untuk Produksi**:
    ```bash
    npm run build
    ```
-   Hasil file HTML/CSS/JS statis yang siap di-deploy akan berada di folder **`dist/`**.
+   Aset HTML/CSS/JS statis hasil build akan tersimpan di direktori `dist/`.
 
 ---
 
-## 🌐 Panduan Deployment ke Netlify (Drag & Drop)
+## 🚀 Panduan Deploy ke Netlify (Drag & Drop Mode)
 
-1. Jalankan perintah build:
+1. Jalankan proses build:
    ```bash
    npm run build
    ```
-2. Buka **[Netlify Drop](https://app.netlify.com/drop)** atau masuk ke tab **Deploys** pada situs Netlify Anda ([monumental-pithivier-fc9158.netlify.app](https://monumental-pithivier-fc9158.netlify.app/)).
-3. Tarik (*drag and drop*) folder **`dist/`** yang ada di direktori proyek ini langsung ke area upload.
-4. Situs akan langsung ter-update seketika dengan versi terbaru.
+2. Buka dashboard [Netlify Drop](https://app.netlify.com/drop).
+3. Drag & drop folder `dist/` ke area upload browser.
+4. Situs web akan langsung live dalam beberapa detik dengan performa CDN global super cepat.
 
 ---
 
-## 📁 Struktur Folder Proyek
+## 📞 Kanal Kontak Resmi
 
-```text
-├── .agents/                 # Standar tata kelola rule dan skill development
-│   ├── rules/               # Personal context, project rules, & working standards
-│   └── skills/              # Panduan modul scaffolding, coding, deploy, eval, dll
-├── dist/                    # Output static build siap deploy (HTML, CSS, assets)
-├── public/                  # Aset publik statis (favicon, logo, icons)
-├── src/
-│   ├── components/
-│   │   └── sections/        # Komponen modular: Navbar, Hero, Portfolio, HowWeWork, FAQ, Wizard, Footer
-│   ├── data/                # Data statis portofolio, solusi industri, faqs (src/data/content.ts)
-│   ├── layouts/             # Template layout utama, SEO meta tags, & theme script
-│   ├── pages/               # Routing halaman (index.astro)
-│   └── styles/              # Global CSS Tailwind v4 & custom variants
-├── astro.config.mjs         # Konfigurasi Astro + Vite Tailwind
-├── netlify.toml             # Konfigurasi keamanan header & routing Netlify
-└── package.json             # Manifest package & npm scripts
-```
-
----
-
-## 📬 Kontak Resmi Veridion Studio
-- **Email**: [verdionstudio@gmail.com](mailto:verdionstudio@gmail.com)
-- **WhatsApp / Telepon**: [0823-2237-0126](https://wa.me/6282322370126)
-- **Website**: [monumental-pithivier-fc9158.netlify.app](https://monumental-pithivier-fc9158.netlify.app/)
-
----
-
-## 📄 Lisensi & Hak Cipta
-Hak Cipta © 2026 **Veridion Studio**. Seluruh hak cipta dilindungi undang-undang.
+- **WhatsApp Direct**: [0823-2237-0126](https://wa.me/6282322370126) *(Tech Lead Support)*
+- **Email Resmi**: [verdionstudio@gmail.com](mailto:verdionstudio@gmail.com)
+- **Jam Operasional**: Senin – Sabtu (08:00 – 21:00 WIB)

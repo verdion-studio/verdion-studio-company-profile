@@ -2,6 +2,7 @@ export interface PortfolioItem {
   id: string;
   title: string;
   client: string;
+  propertyType: string;
   category: string;
   impact: string;
   description: string;
@@ -15,48 +16,96 @@ export interface PortfolioItem {
 
 export const portfolioData: PortfolioItem[] = [
   {
+    id: 'aura-haven-villa-pms',
+    title: 'Aura Haven Luxury Villas: Direct Booking Engine & Multi-Channel PMS',
+    client: 'Aura Haven Property Group (12 Luxury Pool Villas)',
+    propertyType: 'Private Villa & Luxury Vacation Rental',
+    category: 'Direct Booking Engine & Villa PMS',
+    impact: 'Menaikkan porsi direct booking hingga +38% dan menghemat biaya komisi OTA hingga Rp 28.400.000 per bulan.',
+    description: 'Platform direct booking berkecepatan tinggi dengan kalender ketersediaan real-time, integrasi iCal 2-arah ke Airbnb & Booking.com, serta konfirmasi instan via WhatsApp Concierge tanpa potongan komisi pihak ketiga.',
+    features: [
+      'Direct Booking Engine dengan simulasi tanggal & kalkulasi tarif musiman dinamis',
+      'iCal Calendar Sync 2-Arah (Cegah overbooking antara Airbnb, Agoda, & direct guest)',
+      'Automated WhatsApp Concierge: Panduan check-in otomatis, titik GPS, dan WiFi pass',
+      'Integrasi Payment Gateway: Uang muka (DP) & pelunasan langsung via QRIS & Kartu Kredit'
+    ],
+    tags: ['Direct Booking Engine', 'iCal Calendar Sync', 'WhatsApp Concierge', 'Zero OTA Fee', 'Villa PMS'],
+    metrics: [
+      { label: 'Pertumbuhan Direct Booking', value: '+38%' },
+      { label: 'Komisi OTA Diselamatkan', value: 'Rp 28.4 Jt/bln' },
+      { label: 'Risiko Double Booking', value: '0 Kasus (Sync iCal)' }
+    ],
+    activeStatus: 'Arsitektur Kustom Aktif — Siap Diimplementasikan ke Properti Anda',
+    isInteractiveDemo: false
+  },
+  {
+    id: 'lumina-resort-pms-concierge',
+    title: 'Lumina Eco-Resort: All-in-One Cloud PMS, Housekeeping & Room Dining',
+    client: 'Lumina Eco-Resort & Wellness Retreat (24 Units)',
+    propertyType: 'Boutique Resort & Glamping Suites',
+    category: 'Cloud PMS & Guest In-Room Dining',
+    impact: 'Mempercepat turnaround pembersihan kamar hingga 40% dan menihilkan selisih tagihan restoran di folio kamar.',
+    description: 'Sistem operasional front desk terintegrasi dengan pemantauan status kamar housekeeping (Clean/Dirty/Inspected), pesanan F&B in-room dining via QR di kamar, serta modul Night Audit & Rekapitulasi Pajak Daerah (PB1 Hotel).',
+    features: [
+      'Interactive Room Grid & Front Desk Dashboard (Check-in, Check-out, Extend Stay)',
+      'Housekeeping Mobile Tracker: Notifikasi kamar kotor & update status siap huni instan',
+      'QR Room Service & Dining: Pesanan tamu otomatis dibebankan ke Folio Tagihan Kamar',
+      'Automated Night Audit & Laporan Pajak Daerah PB1 (10% PHR) siap ekspor'
+    ],
+    tags: ['Cloud PMS', 'Housekeeping Tracker', 'Room Folio Billing', 'Night Audit PB1', 'QR Dining'],
+    metrics: [
+      { label: 'Efisiensi Housekeeping', value: '40% Lebih Cepat' },
+      { label: 'Kebocoran Tagihan Resto', value: '0% (Auto-Folio)' },
+      { label: 'Waktu Night Audit', value: '< 5 Menit' }
+    ],
+    activeStatus: 'Blueprint Sistem Siap Pakai & Disesuaikan dengan SOP Hotel',
+    isInteractiveDemo: false
+  },
+  {
     id: 'coffee-stand-pos',
-    title: 'Smart Coffee Stand POS & Barista Ordering System',
-    client: 'Veridion Showcase / F&B Stand Kopi',
-    category: 'Cafe & F&B Point of Sale',
-    impact: 'Memangkas antrean pesanan hingga 4 sentuhan layar dan otomatisasi kalkulasi kembalian tunai.',
-    description: 'Sistem kasir cerdas khusus kedai & stand kopi mandiri. Dilengkapi modul kustomisasi minuman barista (suhu, sugar level, ekstra espresso), integrasi QRIS, dan pencetakan struk kasir thermal 58mm.',
+    title: 'Hotel Lounge & Stand Barista: Fast POS & Guest Billing Terminal',
+    client: 'Veridion Showcase / Hospitality F&B Outlet',
+    propertyType: 'Hotel Coffee Lounge, Bar & Cafe',
+    category: 'Hospitality F&B Point of Sale',
+    impact: 'Memangkas antrean pesanan tamu di lobby lounge dan mendukung cetak struk kasir thermal 58mm.',
+    description: 'Sistem kasir cepat touch-friendly untuk operasional coffee lounge, bar tepi kolam, dan restoran hotel. Dilengkapi opsi kustomisasi minuman barista, QRIS instan, dan integrasi tagihan fleksibel.',
     features: [
       'Menu Barista Cepat (Espresso, Latte, Manual Brew, Pastry)',
       'Modifier Minuman (Ice/Hot, Level Gula, Add-on Topping)',
       'Checkout Kilat: Pecahan Uang Tunai Otomatis & QRIS Digital',
-      'Simulasi Cetak Struk Kasir Thermal 58mm & Rekap Omzet Harian'
+      'Simulasi Cetak Struk Kasir Thermal 58mm & Rekap Shift Kasir Harian'
     ],
-    tags: ['Cafe POS', 'Barista Tool', 'QRIS Payment', 'Thermal Receipt', 'PWA Offline'],
+    tags: ['Lounge POS', 'Barista Tool', 'QRIS Payment', 'Thermal Receipt', 'PWA Offline'],
     metrics: [
       { label: 'Waktu Input Pesanan', value: '< 10 Detik' },
       { label: 'Akses Demo Publik', value: '100% Bebas Akses' },
       { label: 'Dukungan Perangkat', value: 'HP, Tablet & POS' }
     ],
     activeStatus: 'Sistem Demo Interaktif Aktif 24/7',
-    liveUrl: 'https://coffee-stand-demo.netlify.app/', // Akan diupdate begitu link repo coffee-stand aktif
+    liveUrl: 'https://coffee-stand-demo.netlify.app/',
     isInteractiveDemo: true
   },
   {
-    id: 'pelangi-efrata-pos-web',
-    title: 'Enterprise POS & Company Profile System',
-    client: 'CV Pelangi Efrata',
-    category: 'Point of Sale & Web Portal',
-    impact: 'Meningkatkan akurasi transaksi harian dan efisiensi rekapitulasi inventaris secara real-time.',
-    description: 'Solusi software end-to-end yang mengintegrasikan sistem kasir operasional harian (Point of Sale) toko dan web company profile resmi untuk memperkuat kredibilitas B2B.',
+    id: 'pelangi-efrata-supply',
+    title: 'CV Pelangi Efrata: Hospitality Supply & Amenities Inventory Portal',
+    client: 'CV Pelangi Efrata (Partner Distribusi Suplai Hotel & UMKM)',
+    propertyType: 'Hospitality Supply Chain & Corporate B2B',
+    category: 'Supply Inventory & Enterprise Web',
+    impact: 'Menjaga akurasi logistik pengadaan amenities dan efisiensi waktu rekapitulasi data harian hingga 70%.',
+    description: 'Solusi software terintegrasi yang menangani pencatatan stok barang, kasir operasional harian, serta web profil resmi untuk kredibilitas distribusi pasokan ke mitra usaha dan perhotelan.',
     features: [
-      'Sistem Kasir (POS) responsif & rekap transaksi harian instan',
-      'Manajemen data stok & produk dengan peringatan stok menipis',
-      'Company Profile korporat teroptimasi SEO & profil perusahaan resmi',
-      'Ekspor laporan penjualan dan histori pembukuan berkala'
+      'Sistem Kasir & Inventory Management dengan peringatan stok kritis',
+      'Web Portal Resmi & Katalog Suplai B2B teroptimasi SEO',
+      'Rekap transaksi logistik dan pelaporan pembukuan multi-periode',
+      'Sistem aktif diuji dan berjalan nyata dalam operasional harian'
     ],
-    tags: ['POS Kasir', 'Company Profile', 'Inventory Management', 'B2B Enterprise'],
+    tags: ['B2B Hospitality Supply', 'Inventory System', 'Enterprise Portal', 'Studi Kasus Nyata'],
     metrics: [
       { label: 'Efisiensi Waktu Rekap', value: '70% Lebih Cepat' },
       { label: 'Status Operasional', value: '100% Aktif Digunakan' },
-      { label: 'Akurasi Transaksi', value: '99.9%' }
+      { label: 'Akurasi Inventaris', value: '99.9%' }
     ],
-    activeStatus: 'Sistem aktif digunakan dalam operasional harian bisnis',
+    activeStatus: 'Sistem Operasional Aktif Digunakan Klien Nyata',
     liveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
     isInteractiveDemo: false
   }
@@ -65,143 +114,202 @@ export const portfolioData: PortfolioItem[] = [
 export const portfolioLinks = {
   pelangiWebLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
   coffeeStandLiveUrl: 'https://coffee-stand-demo.netlify.app/',
-  posAccessType: 'Private Enterprise Repository (NDA Protected)',
-  posNotice: 'Sistem POS CV Pelangi Efrata berjalan pada private corporate environment dengan pengamanan data internal. Untuk melihat live demo walkthrough atau presentasi arsitektur modul kasirnya, calon mitra dapat mengajukan sesi konsultasi eksklusif.'
+  posAccessType: 'Private Enterprise Repository & Hospitality Client Environment',
+  posNotice: 'Sistem PMS properti dan supply CV Pelangi Efrata berjalan pada lingkungan terproteksi privasi operasional klien. Untuk melihat live demo walkthrough modul PMS, calendar sync, dan flow guest concierge, silakan ajukan sesi konsultasi langsung bersama lead developer kami.'
 };
 
 export interface IndustrySolution {
   id: string;
   name: string;
-  iconName: string;
+  targetProperty: string;
   badge: string;
   description: string;
+  painPoints: string;
   recommendedFeatures: string[];
 }
 
 export const industrySolutions: IndustrySolution[] = [
   {
-    id: 'cafe-resto',
-    name: 'Cafe, Coffee Shop & Resto',
-    iconName: 'Coffee',
-    badge: 'Food & Beverage',
-    description: 'Sistem operasional kasir cepat, pesanan meja QR, serta kontrol bahan baku tanpa selisih.',
-    recommendedFeatures: ['Smart POS Kasir Cepat', 'Menu Digital & QR Order', 'Kitchen Order Ticket (KOT)', 'Manajemen Stok Bahan Baku']
+    id: 'boutique-hotels',
+    name: 'Boutique Hotels & City Lodges',
+    targetProperty: 'Hotel Butik, Heritage Hotel & City Stay (10 - 50 Kamar)',
+    badge: 'Boutique Hotel',
+    description: 'Sistem manajemen front desk lengkap tanpa biaya langganan membengkak. Kendalikan kamar, night audit, dan pengalaman tamu secara profesional.',
+    painPoints: 'Software hotel legacy lambat, berbayar mahal per bulan, dan susah dioperasikan staf baru.',
+    recommendedFeatures: [
+      'Interactive Room Grid & Status Kamar Real-time',
+      'Folio Billing (Kamar, F&B Lounge, Laundry & Mini-bar)',
+      'Laporan Night Audit & Rekapitulasi Pajak Daerah PB1',
+      'Penyimpanan Rekam Tamu (Guest History & Preferences)'
+    ]
   },
   {
-    id: 'apotik-klinik',
-    name: 'Apotek & Klinik Mandiri',
-    iconName: 'Pill',
-    badge: 'Kesehatan & Farmasi',
-    description: 'Kontrol stok obat dengan expired date tracker, resep digital, dan pencatatan transaksi farmasi.',
-    recommendedFeatures: ['Expired Date & Batch Tracking', 'Sistem Resep & Kasir Apotek', 'Laporan Obat Masuk/Keluar', 'Multi-Unit Harga']
+    id: 'luxury-villas',
+    name: 'Private Villas & Vacation Rentals',
+    targetProperty: 'Luxury Villa, Kompleks Villa Sewa Harian & Airbnb Host',
+    badge: 'Private Villas',
+    description: 'Maksimalkan margin profit villa Anda dengan memotong komisi OTA 15-20%. Dapatkan direct booking mandiri dengan kalender anti-overbooking.',
+    painPoints: 'Komisi OTA memotong hingga 20% margin dan resiko double booking antar platform kalender.',
+    recommendedFeatures: [
+      'High-Converting Direct Booking Engine & Payment Gateway',
+      'iCal Multi-Channel Sync 2-Arah (Airbnb, Agoda, Booking.com)',
+      'Automated WhatsApp Guest Concierge (Auto Check-in details)',
+      'Kalkulasi Dynamic Rates (Weekend, Low/High Season)'
+    ]
   },
   {
-    id: 'perhotelan-villa',
-    name: 'Perhotelan, Villa & Guest House',
-    iconName: 'Building',
-    badge: 'Hospitality',
-    description: 'Manajemen ketersediaan kamar, reservasi mandiri, dan invoice tamu otomatis.',
-    recommendedFeatures: ['Room Availability Calendar', 'Sistem Booking & Check-in/out', 'Invoice Tamu Otomatis', 'Katalog Layanan & Wisata']
+    id: 'glamping-resorts',
+    name: 'Glamping, Eco-Resorts & Outbound',
+    targetProperty: 'Glamping Sites, Wellness Retreat, Cabin & Eco-Lodge',
+    badge: 'Resort & Glamping',
+    description: 'Sistem reservasi terpadu untuk penginapan alam terbuka dengan paket aktivitas outdoor, sewa perlengkapan, dan dining area.',
+    painPoints: 'Paket tenda camp, aktivitas tracking, dan barbecue sering tercatat di buku terpisah tanpa sinkronisasi.',
+    recommendedFeatures: [
+      'Reservasi Paket Bundling (Tenda/Kabin + Aktivitas/Tour)',
+      'QR Code In-Tent Dining & Barbecue Booking',
+      'Jadwal Penjemputan / Shuttle Coordination Tracker',
+      'Pencatatan Deposit Kerusakan & Pengembalian Otomatis'
+    ]
   },
   {
-    id: 'retail-umkm',
-    name: 'Retail, Grosir & Toko Kelontong',
-    iconName: 'ShoppingBag',
-    badge: 'Retail & Dagang',
-    description: 'Katalog produk online, kasir barcode scanner, dan integrasi pesanan instan via WhatsApp.',
-    recommendedFeatures: ['Barcode Scanner POS', 'Laporan Laba Rugi Harian', 'Katalog WhatsApp Order', 'Mini CRM Member/Pelanggan']
+    id: 'hotel-fnb-lounge',
+    name: 'Hotel F&B, Rooftop & Pool Clubs',
+    targetProperty: 'Restoran Hotel, Rooftop Lounge, Beach Club & Bar Tamu',
+    badge: 'Hospitality F&B',
+    description: 'Sistem POS kasir dan reservasi meja yang terintegrasi langsung dengan nomor kamar tamu untuk kenyamanan *room-charge billing*.',
+    painPoints: 'Tamu komplain saat checkout karena tagihan resto tidak tercatat rapi di resepsionis.',
+    recommendedFeatures: [
+      'Fast Touchscreen POS Kasir Bar & Dapur',
+      'Fitur Charge to Room (Koneksi ke Nomor Kamar & Nama Tamu)',
+      'Split Bill & Minimum Spend Manager Meja VIP',
+      'Manajemen Stok Bahan Makanan & Minuman Minibar'
+    ]
+  }
+];
+
+export const hospitalityTechStandards = [
+  {
+    title: 'Zero OTA Commission (100% Margin Anda)',
+    description: 'Tamu membayar langsung ke rekening Anda via Midtrans / Xendit (QRIS, Kartu Kredit, Virtual Account) tanpa potongan komisi pihak ketiga 15-20% per pemesanan.',
+    icon: 'ShieldCheck'
+  },
+  {
+    title: '2-Way iCal Multi-Channel Calendar Sync',
+    description: 'Kalender ketersediaan tersinkronisasi otomatis dengan Airbnb, Booking.com, Agoda, dan kalender internal. Hilangkan 100% risiko overbooking atau double booking.',
+    icon: 'CalendarSync'
+  },
+  {
+    title: 'Automated Guest WhatsApp Concierge',
+    description: 'Begitu booking terkonfirmasi, tamu otomatis menerima pesan WhatsApp personal berisi pin lokasi Google Maps, petunjuk check-in, aturan properti, dan password WiFi.',
+    icon: 'MessageCircle'
+  },
+  {
+    title: 'Front Desk PMS & Housekeeping Grid',
+    description: 'Dashboard real-time yang ringan diakses dari tablet/laptop resepsionis. Staf housekeeping cukup update status kamar (Kotor / Bersih / Siap Huni) via HP pribadi.',
+    icon: 'LayoutGrid'
+  },
+  {
+    title: 'Room Folio Billing & Night Audit Otomatis',
+    description: 'Semua tagihan in-room dining, minibar, dan laundry tamu langsung tertaut ke satu tagihan kamar. Laporan night audit dan pajak PB1 selesai dalam hitungan detik.',
+    icon: 'Receipt'
+  },
+  {
+    title: 'Kepemilikan Penuh Data Tamu (Direct CRM)',
+    description: 'Berbeda dengan OTA yang menyembunyikan kontak tamu, Anda memiliki 100% database nomor WA & email tamu untuk program promo loyalitas dan direct re-booking.',
+    icon: 'Users'
   }
 ];
 
 export const earlyPartnerProgram = {
   totalSlots: 3,
   availableSlots: 3,
-  badgeText: 'Program Kemitraan Percontohan',
-  title: 'Veridion Early Partner Program: Gratis Biaya Development untuk 3 Klien Pertama',
-  description: 'Khusus untuk 3 pemilik usaha (UMKM, Cafe, Apotek, Hotel, Retail) yang siap mentransformasi sistem bisnisnya. Kami bangunkan aplikasi/web sesuai kebutuhan Anda tanpa biaya jasa pengembangan.',
+  badgeText: 'Program Kemitraan Hospitality',
+  title: 'Hospitality Pilot Program: Gratis Biaya Development untuk 3 Properti Pertama',
+  description: 'Khusus untuk 3 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Guest House) yang siap mendongkrak direct booking dan merapikan operasional propertinya. Kami bangunkan Direct Booking Engine atau Custom PMS tanpa biaya jasa pembuatan.',
   conditions: [
-    'Gratis 100% Development Fee (Biaya Pembuatan Aplikasi / Web)',
-    'Klien hanya menanggung domain/server pihak ketiga jika ingin domain kustom sendiri',
-    'Sebagai timbal balik, klien bersedia memberikan feedback dan menjadi studi kasus resmi Veridion Studio',
-    'Prioritas utama diberikan kepada bisnis yang sudah aktif beroperasi'
+    'Gratis 100% Development Fee (Biaya Pembuatan Sistem / Web Booking Kustom)',
+    'Klien hanya menanggung domain resmi properti & akun payment gateway sendiri (semua dana tamu masuk ke rekening Anda)',
+    'Sebagai timbal balik, pemilik properti bersedia memberikan feedback dan menjadi studi kasus resmi Veridion Studio',
+    'Prioritas utama diberikan kepada properti yang sudah aktif beroperasi atau siap opening dalam 1-2 bulan'
   ]
 };
 
 export const pilotTerms = {
-  title: 'Ketentuan & Batasan Program Early Partner',
-  subtitle: 'Transparansi Penuh untuk Hubungan Kemitraan yang Sehat & Saling Menguntungkan',
+  title: 'Ketentuan & Transparansi Program Pilot Hospitality',
+  subtitle: 'Standar Profesional untuk Kemitraan Properti Jangka Panjang',
   covered: [
-    '1 Unit Sistem Software Inti (Pilih salah satu: Web Portal Bisnis / Sistem Kasir POS Cafe / Sistem Inventori Toko)',
-    'Setup awal hingga 50 daftar produk/menu dan master data bisnis Anda',
-    'Pelatihan staf kasir dan pemilik usaha hingga mandiri mengoperasikan sistem',
-    'Garansi pemeliharaan & perbaikan bug selama 30 hari pasca serah terima'
+    '1 Unit Sistem Inti Properti (Pilihan: Direct Booking Engine + Payment ATAU Cloud PMS Front Desk & Housekeeping)',
+    'Setup master data kamar/villa, foto, tipe tempat tidur, fasilitas, dan konfigurasi harga musiman',
+    'Pelatihan staf resepsionis dan front desk hingga mandiri mengoperasikan sistem',
+    'Garansi pendampingan operasional & perbaikan bug selama 30 hari pasca go-live'
   ],
   clientCommitment: [
-    'Menyediakan data menu/produk, harga, dan alur kerja bisnis secara kooperatif',
-    'Menguji coba dan menggunakan sistem secara aktif dalam operasional toko',
-    'Bersedia memberikan ulasan testimoni tertulis atau video singkat (30-45 detik) setelah sistem berjalan',
-    'Memberikan izin pencantuman nama brand & logo bisnis sebagai portofolio resmi Veridion Studio'
+    'Menyediakan data properti (foto berkualitas, deskripsi tipe kamar, dan aturan check-in/out) secara kooperatif',
+    'Menguji coba dan menggunakan sistem secara aktif dalam reservasi tamu sebenarnya',
+    'Bersedia memberikan ulasan testimoni atau video singkat (30-45 detik) dari Owner atau General Manager (GM)',
+    'Memberikan izin pencantuman nama properti & logo sebagai portofolio resmi Veridion Studio'
   ],
   notCovered: [
-    'Biaya perpanjangan nama domain pribadi (cth: .com/.id) atau cloud database berbayar pihak ketiga',
-    'Pengadaan fisik hardware tambahan seperti tablet, smartphone, atau printer kasir',
-    'Permintaan fitur di luar kesepakatan awal (fitur kompleks tambahan dapat didiskusikan terpisah)'
+    'Biaya langganan domain web kustom (cth: namavilla.com) atau akun payment gateway pihak ketiga',
+    'Pengadaan fisik hardware tambahan seperti tablet resepsionis atau printer kasir',
+    'Penambahan modul custom di luar kesepakatan awal (fitur lanjutan dapat didiskusikan secara bertahap)'
   ]
 };
 
 export const workingSteps = [
   {
     step: '01',
-    title: 'Konsultasi Kebutuhan (Tanpa Sales)',
-    subtitle: 'Direct with Developer',
-    description: 'Diskusi langsung dengan lead developer teknis via WhatsApp / Google Meet untuk membedah SOP bisnis, kendala kasir, atau kebutuhan web Anda tanpa istilah teknis yang membingungkan.',
-    deliverable: 'Spesifikasi fitur disepakati & estimasi timeline pengerjaan yang jelas'
+    title: 'Audit Properti & Alur Reservasi',
+    subtitle: 'Direct with Tech Lead',
+    description: 'Diskusi langsung dengan lead developer kami via WhatsApp atau Google Meet untuk membedah masalah komisi OTA, alur check-in tamu, atau kendala koordinasi housekeeping di properti Anda.',
+    deliverable: 'Rekomendasi arsitektur sistem properti & estimasi waktu go-live yang terukur'
   },
   {
     step: '02',
-    title: 'Prototipe & Desain Alur Kerja',
-    subtitle: 'Tailored for Your Staff',
-    description: 'Kami merancang antarmuka sistem yang disesuaikan persis dengan kebiasaan operasional toko Anda (touch-friendly, tombol cepat, dan tata letak menu yang intuitif).',
-    deliverable: 'Preview interaktif siap dicoba sebelum tahap integrasi final'
+    title: 'Desain Antarmuka Tamu & Resepsionis',
+    subtitle: 'Tailored Guest Experience',
+    description: 'Kami merancang tampilan direct booking yang elegan dan mobile-first untuk tamu kelas atas, serta dashboard resepsionis yang mudah dipahami staf front office non-teknis.',
+    deliverable: 'Preview prototipe interaktif siap uji coba sebelum fase integrasi'
   },
   {
     step: '03',
-    title: 'Integrasi & Uji Coba Lapangan',
-    subtitle: 'Real Hardware Testing',
-    description: 'Sistem diuji coba secara ketat di perangkat nyata (HP/Tablet kasir, printer struk thermal bluetooth, kalkulasi diskon, dan pencatatan inventaris tanpa selisih).',
-    deliverable: 'Sistem stabil 100% bebas error fatal dan siap dipakai operasional'
+    title: 'Integrasi Payment, iCal & Uji Lapangan',
+    subtitle: 'Real-World Sync Testing',
+    description: 'Menghubungkan payment gateway (QRIS / Kartu Kredit) ke rekening pemilik, mensinkronkan kalender iCal Airbnb/Booking.com, dan memastikan alur WhatsApp concierge berjalan mulus.',
+    deliverable: 'Sistem stabil 100% tanpa risiko overbooking dan siap menerima tamu riil'
   },
   {
     step: '04',
-    title: 'Pelatihan Staf & Garansi Pasca-Rilis',
-    subtitle: 'Zero Confusion Handover',
-    description: 'Kami mendampingi langsung hingga kasir dan owner mahir menggunakan sistem, lengkap dengan garansi perbaikan bug cepat dan dukungan teknis berkelanjutan.',
-    deliverable: 'Panduan penggunaan praktis & garansi pendampingan langsung'
+    title: 'Pelatihan Staf Front Office & Go-Live',
+    subtitle: 'Full Onboarding Support',
+    description: 'Pendampingan langsung kepada resepsionis dan tim operasional hingga lancar, disertai SOP panduan praktis dan garansi penanganan teknis responsif.',
+    deliverable: 'Sistem live aktif & garansi pendampingan langsung via jalur prioritas'
   }
 ];
 
 export const faqs = [
   {
-    q: 'Apakah sistem kasir (POS) Veridion bisa dijalankan di HP Android atau tablet biasa?',
-    a: 'Sangat bisa. Sistem kami dibangun dengan prinsip responsive dan mobile-first. Anda tidak wajib membeli mesin kasir POS berharga mahal; tablet Android standar, iPad, atau bahkan smartphone yang sudah Anda miliki bisa langsung difungsikan sebagai terminal kasir.'
+    q: 'Bagaimana cara sistem Veridion mencegah overbooking antara Web Direct dan OTA seperti Airbnb/Booking.com?',
+    a: 'Sistem kami menggunakan integrasi protokol 2-Way iCal Multi-Channel Sync standar industri perhotelan internasional. Setiap kali ada tamu yang memesan di website Anda, jadwal tanggal tersebut otomatis diblokir di Airbnb dan Booking.com. Sebaliknya, saat ada booking masuk dari OTA, tanggal di website direct Anda otomatis terkunci dalam hitungan menit.'
   },
   {
-    q: 'Bagaimana jika koneksi internet di cafe atau toko saya tiba-tiba terputus?',
-    a: 'Kami merancang sistem dengan kapabilitas Offline-Ready (PWA / local caching). Staf kasir Anda tetap dapat menginput pesanan dan mencetak struk belanja. Begitu internet kembali stabil, data penjualan akan tersinkronisasi secara otomatis.'
+    q: 'Apakah uang pembayaran tamu langsung masuk ke rekening bank pemilik properti?',
+    a: 'Ya, 100% langsung masuk ke rekening Anda. Kami mengintegrasikan payment gateway resmi (seperti Midtrans atau Xendit) atas nama usaha atau rekening pribadi pemilik properti. Veridion Studio tidak memotong komisi per transaksi maupun menahan dana operasional Anda.'
   },
   {
-    q: 'Apa saja syarat untuk mendapatkan slot 100% Gratis di Early Partner Program?',
-    a: 'Program ini dibuka untuk 3 pemilik bisnis (UMKM, Cafe/Resto, Apotek, atau Hotel) yang sudah aktif beroperasi dan siap berkomitmen memberikan feedback langsung. Kami membebaskan 100% biaya jasa pengerjaan aplikasi, dengan timbal balik kesediaan menjadi studi kasus resmi Veridion Studio.'
+    q: 'Apakah staf resepsionis atau housekeeping yang tidak mahir teknologi bisa mengoperasikannya?',
+    a: 'Sangat mudah. Sistem kami dirancang dengan pendekatan antarmuka intuitif (clean UX). Staf resepsionis hanya perlu melihat grid warna kamar (Hijau = Siap Huni, Merah = Terisi, Kuning = Sedang Dibersihkan), sedangkan tim housekeeping cukup menggunakan smartphone pribadi untuk update status kamar dengan sekali sentuh.'
   },
   {
-    q: 'Apakah ada biaya langganan bulanan tersembunyi setelah aplikasi selesai?',
-    a: 'Tidak ada biaya langganan tersembunyi. Software yang kami bangun adalah solusi kustom untuk bisnis Anda. Anda hanya perlu menyiapkan biaya perpanjangan domain atau hosting pihak ketiga (jika menggunakan nama domain pribadi).'
+    q: 'Berapa rata-rata penghematan komisi yang didapat sebuah villa/hotel dengan Direct Booking Engine?',
+    a: 'Sebagai gambaran, jika properti Anda memiliki 10 unit kamar dengan tarif Rp 800.000/malam dan rata-rata okupansi 65%, perputaran omzet kotor berkisar Rp 156.000.000/bulan. Bila 70% tamu berasal dari OTA dengan komisi 18%, Anda membayar potongan komisi sekitar Rp 19.600.000 setiap bulan! Mengalihkan sebagian reservasi ke Direct Booking menghemat puluhan hingga ratusan juta rupiah per tahun.'
   },
   {
-    q: 'Bagaimana jika kami menemukan bug atau ada kendala teknis setelah aplikasi berjalan?',
-    a: 'Setiap proyek yang kami selesaikan disertai dengan Garansi Pendampingan Teknis. Anda dapat menghubungi lead developer kami langsung via WhatsApp untuk penanganan cepat tanpa birokrasi berbelit-belit.'
+    q: 'Apa saja syarat untuk mendapatkan slot 100% Gratis di Hospitality Pilot Program?',
+    a: 'Program ini dibuka khusus untuk 3 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Guesthouse) yang sudah beroperasi atau mendekati jadwal launching. Kami menggratiskan 100% biaya jasa development sistem, dengan timbal balik kesediaan menjadi portofolio dan studi kasus resmi Veridion Studio.'
+  },
+  {
+    q: 'Apakah kami harus membeli server atau perangkat komputer kasir hotel yang mahal?',
+    a: 'Tidak perlu. Sistem berbasis arsitektur Cloud Modern yang responsif. Front desk dapat dijalankan dari laptop standar atau tablet (iPad / Android), dan tamu dapat memesan langsung dari smartphone mereka tanpa perlu mendownload aplikasi dari Play Store / App Store.'
   }
 ];
-
-
-

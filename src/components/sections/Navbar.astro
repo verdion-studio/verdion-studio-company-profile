@@ -14,22 +14,26 @@
         <span class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
           Veridion <span class="text-emerald-500 dark:text-emerald-400 font-extrabold">Studio</span>
         </span>
-        <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Independent Tech Studio</span>
+        <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Hospitality Tech Studio</span>
       </div>
     </a>
 
     <!-- Nav Links (Desktop) -->
-    <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
-      <a href="#solusi" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Solusi Industri</a>
-      <a href="#portofolio" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Portofolio</a>
-      <a href="#cara-kerja" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Alur Kerja</a>
+    <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+      <a href="#solusi" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Solusi Properti</a>
+      <a href="#portofolio" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Studi Kasus</a>
+      <a href="#kalkulator-roi" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center gap-1">
+        <span>Kalkulator ROI</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+      </a>
+      <a href="#arsitektur-teknologi" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Standar Teknologi</a>
       <a href="#early-partner" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-        <span>Early Partner</span>
+        <span>Pilot Program</span>
         <span class="px-2 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 rounded-full font-bold animate-pulse">
           3 Slot Gratis
         </span>
       </a>
-      <a href="#request-builder" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Rancang App</a>
+      <a href="#request-builder" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Rancang Sistem</a>
     </nav>
 
     <!-- Right Controls: Theme Toggle, CTA, & Mobile Menu Button -->
@@ -56,7 +60,7 @@
         href="#request-builder"
         class="hidden sm:inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:opacity-95 transition-all duration-200"
       >
-        <span>Konsultasi Proyek</span>
+        <span>Konsultasi Properti</span>
       </a>
 
       <!-- Mobile Menu Hamburger Button -->
@@ -64,7 +68,7 @@
         id="mobileMenuToggleBtn"
         type="button"
         aria-label="Buka menu navigasi"
-        class="md:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center justify-center"
+        class="lg:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center justify-center"
       >
         <svg id="hamburgerIcon" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -77,31 +81,40 @@
   </div>
 
   <!-- Mobile Drawer Menu Dropdown -->
-  <div id="mobileMenuDropdown" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B0F19] px-4 py-4 space-y-3 transition-colors">
+  <div id="mobileMenuDropdown" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B0F19] px-4 py-4 space-y-3 transition-colors shadow-lg">
     <a href="#solusi" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
-      Solusi Industri
+      Solusi Properti
     </a>
     <a href="#portofolio" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
       Studi Kasus & Portofolio
     </a>
+    <a href="#kalkulator-roi" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      <span>Kalkulator Penghematan OTA</span>
+      <span class="px-2 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-bold rounded">
+        ROI Tool
+      </span>
+    </a>
+    <a href="#arsitektur-teknologi" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      Standar Teknologi Properti
+    </a>
     <a href="#cara-kerja" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
-      Alur Kerja
+      Alur Kerja & Implementasi
     </a>
     <a href="#early-partner" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
-      <span>Early Partner Program</span>
+      <span>Pilot Program Hospitality</span>
       <span class="px-2 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 rounded-full font-bold">
         3 Slot Gratis
       </span>
     </a>
     <a href="#request-builder" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
-      Rancang Aplikasi
+      Rancang Sistem Properti
     </a>
     <div class="pt-2">
       <a
         href="#request-builder"
         class="mobile-nav-link w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm shadow-md"
       >
-        <span>Mulai Konsultasi Proyek</span>
+        <span>Mulai Konsultasi Properti</span>
       </a>
     </div>
   </div>
@@ -166,9 +179,9 @@
       }
     };
 
-    // Close dropdown when a mobile link is tapped
-    const mobileLinks = dropdown.querySelectorAll('.mobile-nav-link');
-    mobileLinks.forEach((link) => {
+    // Close menu when a link is clicked
+    const links = dropdown.querySelectorAll('.mobile-nav-link');
+    links.forEach(link => {
       link.addEventListener('click', () => {
         dropdown.classList.add('hidden');
         hamburgerIcon.classList.remove('hidden');
@@ -177,14 +190,6 @@
     });
   }
 
-  function initNavbar() {
-    setupThemeToggle();
-    setupMobileMenu();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavbar);
-  } else {
-    initNavbar();
-  }
+  setupThemeToggle();
+  setupMobileMenu();
 </script>

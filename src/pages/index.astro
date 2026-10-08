@@ -2,8 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/sections/Navbar.astro';
 import Hero from '../components/sections/Hero.astro';
-import IndustrySolutions from '../components/sections/IndustrySolutions.astro';
+import OtaSavingsCalculator from '../components/sections/OtaSavingsCalculator.astro';
 import PortfolioCaseStudy from '../components/sections/PortfolioCaseStudy.astro';
+import HospitalityStandards from '../components/sections/HospitalityStandards.astro';
+import IndustrySolutions from '../components/sections/IndustrySolutions.astro';
 import HowWeWork from '../components/sections/HowWeWork.astro';
 import EarlyPartner from '../components/sections/EarlyPartner.astro';
 import AppRequestWizard from '../components/sections/AppRequestWizard.astro';
@@ -12,13 +14,15 @@ import Footer from '../components/sections/Footer.astro';
 ---
 
 <Layout
-  title="Veridion Studio | Independent Tech Studio — POS Kasir, Sistem & Web Custom UMKM"
-  description="Veridion Studio: Independent Tech Studio mitra digital UMKM, Cafe/Resto, Apotek, dan Hotel. Konsultasi langsung dengan lead developer tanpa perantara. Program peluncuran: Gratis biaya development untuk 3 klien pertama!"
+  title="Veridion Studio | Hospitality Tech Studio — Direct Booking Engine & Villa PMS"
+  description="Veridion Studio: Dedicated Hospitality Tech Studio untuk Boutique Hotel, Luxury Villa, dan Eco-Resort. Direct Booking Engine mandiri tanpa komisi OTA 15-20%, 2-Way iCal Sync, Cloud PMS Front Desk, dan WhatsApp Concierge."
 >
   <Navbar />
   <main class="flex-1">
     <Hero />
+    <OtaSavingsCalculator />
     <PortfolioCaseStudy />
+    <HospitalityStandards />
     <IndustrySolutions />
     <HowWeWork />
     <EarlyPartner />
@@ -27,4 +31,3 @@ import Footer from '../components/sections/Footer.astro';
   </main>
   <Footer />
 </Layout>
-
