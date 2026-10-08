@@ -9,5 +9,5 @@
 - **Bahasa**: Bahasa Indonesia komunikatif, profesional, dan to-the-point.
 - **Mentalitas**: Practical & Impact-driven — mengutamakan software yang benar-benar memecahkan masalah operasional dan mendongkrak penjualan klien daripada over-engineering.
 - **Fokus Pasar**: Bisnis lokal Indonesia (UMKM, Cafe & Resto, Apotek/Klinik, Penginapan/Hospitality).
-- **Kanal Kontak Utama**: Direct WhatsApp Business & Email resmi (sangat disukai pemilik bisnis di Indonesia).
+- **Kanal Kontak Utama**: Direct WhatsApp Business (`0823-2237-0126` / `6282322370126`) & Email resmi (`verdionstudio@gmail.com`).
 

@@ -1,29 +1,29 @@
 ---
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0B0F19]/80 border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-[#0B0F19]/90 border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     <!-- Logo & Brand -->
-    <a href="#" class="flex items-center gap-3 group">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-all duration-300">
-        <div class="w-full h-full bg-white dark:bg-[#0B0F19] rounded-[10px] flex items-center justify-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500 text-lg">
+    <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+      <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-all duration-300 shrink-0">
+        <div class="w-full h-full bg-white dark:bg-[#0B0F19] rounded-[10px] flex items-center justify-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500 text-base sm:text-lg">
           V
         </div>
       </div>
       <div class="flex flex-col">
-        <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
+        <span class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
           Veridion <span class="text-emerald-500 dark:text-emerald-400 font-extrabold">Studio</span>
         </span>
-        <span class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Independent Tech Studio</span>
+        <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium">Independent Tech Studio</span>
       </div>
     </a>
 
     <!-- Nav Links (Desktop) -->
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+    <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
       <a href="#solusi" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Solusi Industri</a>
       <a href="#portofolio" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Portofolio</a>
       <a href="#cara-kerja" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Alur Kerja</a>
-      <a href="#early-partner" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center gap-2">
+      <a href="#early-partner" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center gap-1.5">
         <span>Early Partner</span>
         <span class="px-2 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 rounded-full font-bold animate-pulse">
           3 Slot Gratis
@@ -32,30 +32,76 @@
       <a href="#request-builder" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Rancang App</a>
     </nav>
 
-    <!-- Right Controls: Theme Toggle & CTA -->
-    <div class="flex items-center gap-3">
+    <!-- Right Controls: Theme Toggle, CTA, & Mobile Menu Button -->
+    <div class="flex items-center gap-2 sm:gap-3">
       <!-- Dark / Light Mode Switcher Button -->
       <button
         id="themeToggleBtn"
         type="button"
         aria-label="Ganti mode tema"
-        class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors cursor-pointer flex items-center justify-center"
+        class="p-2 sm:p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors cursor-pointer flex items-center justify-center shrink-0"
       >
         <!-- Sun Icon (Shown in Dark Mode) -->
-        <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg id="sunIcon" class="w-4 h-4 sm:w-5 sm:h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
         <!-- Moon Icon (Shown in Light Mode) -->
-        <svg id="moonIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg id="moonIcon" class="w-4 h-4 sm:w-5 sm:h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
 
+      <!-- CTA (Desktop & Tablet) -->
       <a
         href="#request-builder"
-        class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:opacity-95 transition-all duration-200"
+        class="hidden sm:inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:opacity-95 transition-all duration-200"
       >
         <span>Konsultasi Proyek</span>
+      </a>
+
+      <!-- Mobile Menu Hamburger Button -->
+      <button
+        id="mobileMenuToggleBtn"
+        type="button"
+        aria-label="Buka menu navigasi"
+        class="md:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors flex items-center justify-center"
+      >
+        <svg id="hamburgerIcon" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="closeMenuIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu Dropdown -->
+  <div id="mobileMenuDropdown" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B0F19] px-4 py-4 space-y-3 transition-colors">
+    <a href="#solusi" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      Solusi Industri
+    </a>
+    <a href="#portofolio" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      Studi Kasus & Portofolio
+    </a>
+    <a href="#cara-kerja" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      Alur Kerja
+    </a>
+    <a href="#early-partner" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      <span>Early Partner Program</span>
+      <span class="px-2 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/30 rounded-full font-bold">
+        3 Slot Gratis
+      </span>
+    </a>
+    <a href="#request-builder" class="mobile-nav-link block py-2 px-3 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-emerald-50 dark:hover:bg-slate-800/80 hover:text-emerald-600 dark:hover:text-emerald-400">
+      Rancang Aplikasi
+    </a>
+    <div class="pt-2">
+      <a
+        href="#request-builder"
+        class="mobile-nav-link w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-sm shadow-md"
+      >
+        <span>Mulai Konsultasi Proyek</span>
       </a>
     </div>
   </div>
@@ -99,9 +145,46 @@
     };
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupThemeToggle);
-  } else {
+  function setupMobileMenu() {
+    const mobileBtn = document.getElementById('mobileMenuToggleBtn');
+    const dropdown = document.getElementById('mobileMenuDropdown');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeMenuIcon = document.getElementById('closeMenuIcon');
+
+    if (!mobileBtn || !dropdown || !hamburgerIcon || !closeMenuIcon) return;
+
+    mobileBtn.onclick = function() {
+      const isExpanded = !dropdown.classList.contains('hidden');
+      if (isExpanded) {
+        dropdown.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeMenuIcon.classList.add('hidden');
+      } else {
+        dropdown.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeMenuIcon.classList.remove('hidden');
+      }
+    };
+
+    // Close dropdown when a mobile link is tapped
+    const mobileLinks = dropdown.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        dropdown.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeMenuIcon.classList.add('hidden');
+      });
+    });
+  }
+
+  function initNavbar() {
     setupThemeToggle();
+    setupMobileMenu();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+  } else {
+    initNavbar();
   }
 </script>

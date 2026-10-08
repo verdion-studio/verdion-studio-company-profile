@@ -289,7 +289,7 @@ ${data.additionalNotes}
 
 Mohon informasi langkah selanjutnya dan estimasi jadwal pengerjaannya. Terima kasih!`;
 
-        const waNumber = '6281234567890';
+        const waNumber = '6282322370126';
         const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
       });
@@ -307,7 +307,7 @@ Mohon informasi langkah selanjutnya dan estimasi jadwal pengerjaannya. Terima ka
         const body = encodeURIComponent(
           `Halo Tim Veridion Studio,\n\nNama Bisnis: ${data.businessName}\nPemilik/PIC: ${data.ownerName}\nLokasi: ${data.businessLocation}\n\nIndustri: ${data.industry}\nSolusi: ${data.solutionType}\nFitur: ${data.features.join(', ')}\nEarly Partner: ${data.applyEarly ? 'Ya' : 'Tidak'}\nCatatan: ${data.additionalNotes}`
         );
-        window.location.href = `mailto:contact@veridionstudio.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:verdionstudio@gmail.com?subject=${subject}&body=${body}`;
       });
     }
   }

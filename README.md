@@ -104,5 +104,12 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
 
 ---
 
+## 📬 Kontak Resmi Veridion Studio
+- **Email**: [verdionstudio@gmail.com](mailto:verdionstudio@gmail.com)
+- **WhatsApp / Telepon**: [0823-2237-0126](https://wa.me/6282322370126)
+- **Website**: [monumental-pithivier-fc9158.netlify.app](https://monumental-pithivier-fc9158.netlify.app/)
+
+---
+
 ## 📄 Lisensi & Hak Cipta
 Hak Cipta © 2026 **Veridion Studio**. Seluruh hak cipta dilindungi undang-undang.
