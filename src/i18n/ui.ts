@@ -3,12 +3,12 @@ export type Language = 'id' | 'en';
 export const ui = {
   id: {
     nav: {
-      solusi: 'Solusi Properti',
+      solusi: 'Solusi',
       portofolio: 'Studi Kasus',
       kalkulator: 'Kalkulator ROI',
-      standar: 'Standar Teknologi',
+      standar: 'Standar Tech',
       pilot: 'Pilot Program',
-      pilotBadge: '2 Slot Gratis (S&K)',
+      pilotBadge: '2 Slot',
       rancang: 'Rancang Sistem',
       cta: 'Konsultasi Properti',
       mobileMenuAria: 'Buka menu navigasi',
@@ -124,7 +124,7 @@ export const ui = {
       kalkulator: 'ROI Calculator',
       standar: 'Tech Standards',
       pilot: 'Pilot Program',
-      pilotBadge: '2 Free Slots (T&Cs)',
+      pilotBadge: '2 Slots',
       rancang: 'Build System',
       cta: 'Book Consultation',
       mobileMenuAria: 'Open navigation menu',
@@ -234,3 +234,4 @@ export const ui = {
     }
   }
 };
+

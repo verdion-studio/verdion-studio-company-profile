@@ -282,3 +282,4 @@ export const faqsEn = [
     a: 'Not at all. The entire system is built on modern lightweight cloud architecture. Receptionists can operate the PMS on standard laptops or tablets (iPads/Android), and guests book seamlessly on their mobile browsers without downloading any apps.'
   }
 ];
+

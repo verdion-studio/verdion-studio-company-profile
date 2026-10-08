@@ -44,6 +44,10 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    - Memandu calon klien memilih tipe properti, jumlah unit, solusi utama, dan modul spesifik.
    - Menghasilkan ringkasan kebutuhan sistem terstruktur yang dapat dikirim langsung ke WhatsApp atau Email tim Veridion Studio.
 
+7. **Optimasi UX Navbar & Mobile-First Experience**:
+   - Eliminasi text-wrapping horizontal pada layar desktop (`whitespace-nowrap`, compact spacing, dan single-line alignment).
+   - Mobile drawer modern bergaya *native app* dengan backdrop blur, icon visual interaktif untuk setiap kategori sistem properti, tombol switcher bahasa yang mudah dijangkau, dan *Direct Tech Lead WhatsApp Action*.
+
 ---
 
 ## 🛠️ Tech Stack
