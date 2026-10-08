@@ -22,14 +22,14 @@ export const portfolioData: PortfolioItem[] = [
     propertyType: 'Private Villa & Luxury Vacation Rental',
     category: 'Direct Booking Engine & Villa PMS',
     impact: 'Menaikkan porsi direct booking hingga +38% dan menghemat biaya komisi OTA hingga Rp 28.400.000 per bulan.',
-    description: 'Platform direct booking berkecepatan tinggi dengan kalender ketersediaan real-time, integrasi iCal 2-arah ke Airbnb & Booking.com, serta konfirmasi instan via WhatsApp Concierge tanpa potongan komisi pihak ketiga.',
+    description: 'Platform direct booking berkecepatan tinggi dengan kalender ketersediaan real-time, integrasi iCal 2-arah ke Airbnb & Booking.com, kalkulasi tarif musiman dinamis, serta konfirmasi instan via WhatsApp Concierge tanpa potongan komisi pihak ketiga.',
     features: [
       'Direct Booking Engine dengan simulasi tanggal & kalkulasi tarif musiman dinamis',
       'iCal Calendar Sync 2-Arah (Cegah overbooking antara Airbnb, Agoda, & direct guest)',
       'Automated WhatsApp Concierge: Panduan check-in otomatis, titik GPS, dan WiFi pass',
       'Integrasi Payment Gateway: Uang muka (DP) & pelunasan langsung via QRIS & Kartu Kredit'
     ],
-    tags: ['Direct Booking Engine', 'iCal Calendar Sync', 'WhatsApp Concierge', 'Zero OTA Fee', 'Villa PMS'],
+    tags: ['Direct Booking Engine', 'iCal Calendar Sync', 'WhatsApp Concierge', 'Zero OTA Fee', 'Luxury Villa'],
     metrics: [
       { label: 'Pertumbuhan Direct Booking', value: '+38%' },
       { label: 'Komisi OTA Diselamatkan', value: 'Rp 28.4 Jt/bln' },
@@ -41,7 +41,7 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 'lumina-resort-pms-concierge',
-    title: 'Lumina Eco-Resort: All-in-One Cloud PMS, Housekeeping & Room Dining',
+    title: 'Lumina Eco-Resort & Spa: All-in-One Cloud PMS, Housekeeping & Room Dining',
     client: 'Lumina Eco-Resort & Wellness Retreat (24 Units)',
     propertyType: 'Boutique Resort & Glamping Suites',
     category: 'Cloud PMS & Guest In-Room Dining',
@@ -63,61 +63,55 @@ export const portfolioData: PortfolioItem[] = [
     isInteractiveDemo: false
   },
   {
-    id: 'coffee-stand-pos',
-    title: 'Hotel Lounge & Stand Barista: Fast POS & Guest Billing Terminal',
-    client: 'Veridion Showcase / Hospitality F&B Outlet',
-    propertyType: 'Hotel Coffee Lounge, Bar & Cafe',
-    category: 'Hospitality F&B Point of Sale',
-    impact: 'Memangkas antrean pesanan tamu di lobby lounge dan mendukung cetak struk kasir thermal 58mm.',
-    description: 'Sistem kasir cepat touch-friendly untuk operasional coffee lounge, bar tepi kolam, dan restoran hotel. Dilengkapi opsi kustomisasi minuman barista, QRIS instan, dan integrasi tagihan fleksibel.',
+    id: 'samudera-beach-club-pos',
+    title: 'Samudera Beach Club & Lounge: Hospitality POS & Daybed Booking System',
+    client: 'Samudera Hospitality & Resort Group',
+    propertyType: 'Beach Club, Poolside Bar & Rooftop Lounge',
+    category: 'Hospitality POS & Table Reservation',
+    impact: 'Memangkas antrean kasir bar hingga 60% dan mengintegrasikan tagihan tamu langsung ke nomor kamar hotel.',
+    description: 'Sistem kasir berkecepatan tinggi khusus bar tepi pantai dan restoran hotel. Dilengkapi modul manajemen minimum spend meja VIP/daybed cabana, split bill instan, cetak struk thermal, serta fitur charge-to-room folio.',
     features: [
-      'Menu Barista Cepat (Espresso, Latte, Manual Brew, Pastry)',
-      'Modifier Minuman (Ice/Hot, Level Gula, Add-on Topping)',
-      'Checkout Kilat: Pecahan Uang Tunai Otomatis & QRIS Digital',
-      'Simulasi Cetak Struk Kasir Thermal 58mm & Rekap Shift Kasir Harian'
+      'Fast Touchscreen POS Kasir Bar & Dapur dengan modifier minuman cepat',
+      'Fitur Charge to Room (Koneksi langsung ke nomor kamar & nama tamu menginap)',
+      'VIP Daybed & Cabana Reservation Manager dengan Minimum Spend Calculator',
+      'Pencatatan shift kasir, inventaris botol minuman & cetak thermal receipt 58/80mm'
     ],
-    tags: ['Lounge POS', 'Barista Tool', 'QRIS Payment', 'Thermal Receipt', 'PWA Offline'],
+    tags: ['Hospitality POS', 'Beach Club', 'Charge to Room', 'Minimum Spend', 'Daybed Booking'],
     metrics: [
-      { label: 'Waktu Input Pesanan', value: '< 10 Detik' },
-      { label: 'Akses Demo Publik', value: '100% Bebas Akses' },
-      { label: 'Dukungan Perangkat', value: 'HP, Tablet & POS' }
+      { label: 'Waktu Input Order', value: '< 8 Detik' },
+      { label: 'Integrasi Tagihan Kamar', value: '100% Real-time' },
+      { label: 'Akurasi Kasir Shift', value: '99.9%' }
     ],
-    activeStatus: 'Sistem Demo Interaktif Aktif 24/7',
-    liveUrl: 'https://coffee-stand-demo.netlify.app/',
-    isInteractiveDemo: true
+    activeStatus: 'Arsitektur Sistem POS Hospitality Siap Implementasi',
+    isInteractiveDemo: false
   },
   {
-    id: 'pelangi-efrata-supply',
-    title: 'CV Pelangi Efrata: Hospitality Supply & Amenities Inventory Portal',
-    client: 'CV Pelangi Efrata (Partner Distribusi Suplai Hotel & UMKM)',
-    propertyType: 'Hospitality Supply Chain & Corporate B2B',
-    category: 'Supply Inventory & Enterprise Web',
-    impact: 'Menjaga akurasi logistik pengadaan amenities dan efisiensi waktu rekapitulasi data harian hingga 70%.',
-    description: 'Solusi software terintegrasi yang menangani pencatatan stok barang, kasir operasional harian, serta web profil resmi untuk kredibilitas distribusi pasokan ke mitra usaha dan perhotelan.',
+    id: 'nirvana-glamping-retreat',
+    title: 'Nirvana Glamping & Adventure: Experiential Booking & Activity Scheduler',
+    client: 'Nirvana Eco-Camp & Outdoor Sanctuary (18 Tenda Luxury)',
+    propertyType: 'Luxury Glamping & Experiential Eco-Lodge',
+    category: 'Experiential Booking Engine',
+    impact: 'Mendongkrak pendapatan rata-rata per tamu hingga +45% melalui penjualan paket aktivitas bundling.',
+    description: 'Platform pemesanan komprehensif yang menggabungkan reservasi tenda glamping dengan paket aktivitas outdoor (arung jeram, sunrise trekking, BBQ dinner). Mengatur kapasitas slot pemandu dan deposit peralatan outdoor secara otomatis.',
     features: [
-      'Sistem Kasir & Inventory Management dengan peringatan stok kritis',
-      'Web Portal Resmi & Katalog Suplai B2B teroptimasi SEO',
-      'Rekap transaksi logistik dan pelaporan pembukuan multi-periode',
-      'Sistem aktif diuji dan berjalan nyata dalam operasional harian'
+      'Bundling Reservasi Tenda Glamping + Paket Aktivitas Wisata Outdoor',
+      'Interactive Date & Slot Picker untuk kapasitas tour/aktivitas harian',
+      'QR Self-Service Pemesanan Kayu Bakar, BBQ Set & Add-on Perlengkapan',
+      'Manajemen deposit keamanan & refund otomatis pasca check-out'
     ],
-    tags: ['B2B Hospitality Supply', 'Inventory System', 'Enterprise Portal', 'Studi Kasus Nyata'],
+    tags: ['Glamping Booking', 'Activity Bundling', 'Outdoor Retreat', 'Deposit Manager', 'Eco-Tourism'],
     metrics: [
-      { label: 'Efisiensi Waktu Rekap', value: '70% Lebih Cepat' },
-      { label: 'Status Operasional', value: '100% Aktif Digunakan' },
-      { label: 'Akurasi Inventaris', value: '99.9%' }
+      { label: 'Peningkatan RevPAR', value: '+45% (Bundling)' },
+      { label: 'Efisiensi Jadwal Aktivitas', value: '80% Lebih Rapi' },
+      { label: 'Kepuasan Tamu (CSAT)', value: '4.9 / 5.0' }
     ],
-    activeStatus: 'Sistem Operasional Aktif Digunakan Klien Nyata',
-    liveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
+    activeStatus: 'Arsitektur Kustom Teruji untuk Sektor Wisata Alam & Glamping',
     isInteractiveDemo: false
   }
 ];
 
 export const portfolioLinks = {
-  auraDirectLiveUrl: 'https://cute-liger-eb138a.netlify.app/',
-  pelangiWebLiveUrl: 'https://euphonious-liger-9f90e3.netlify.app/',
-  coffeeStandLiveUrl: 'https://coffee-stand-demo.netlify.app/',
-  posAccessType: 'Private Enterprise Repository & Hospitality Client Environment',
-  posNotice: 'Sistem PMS properti dan supply CV Pelangi Efrata berjalan pada lingkungan terproteksi privasi operasional klien. Untuk melihat live demo walkthrough modul PMS, calendar sync, dan flow guest concierge, silakan ajukan sesi konsultasi langsung bersama lead developer kami.'
+  auraDirectLiveUrl: 'https://cute-liger-eb138a.netlify.app/'
 };
 
 export interface IndustrySolution {
@@ -132,8 +126,22 @@ export interface IndustrySolution {
 
 export const industrySolutions: IndustrySolution[] = [
   {
+    id: 'luxury-villas',
+    name: 'Private Villas & Vacation Rentals',
+    targetProperty: 'Luxury Villa, Kompleks Villa Sewa Harian & Airbnb Host (1 - 10 Unit)',
+    badge: 'Private Villas',
+    description: 'Maksimalkan margin profit villa Anda dengan memotong komisi OTA 15-20%. Dapatkan direct booking mandiri dengan kalender anti-overbooking.',
+    painPoints: 'Komisi OTA memotong hingga 20% margin dan risiko double booking antar platform kalender.',
+    recommendedFeatures: [
+      'High-Converting Direct Booking Engine & Payment Gateway',
+      'iCal Multi-Channel Sync 2-Arah (Airbnb, Agoda, Booking.com)',
+      'Automated WhatsApp Guest Concierge (Auto Check-in details)',
+      'Kalkulasi Dynamic Rates (Weekend, Low/High Season)'
+    ]
+  },
+  {
     id: 'boutique-hotels',
-    name: 'Boutique Hotels & City Lodges',
+    name: 'Boutique Hotels & Heritage Lodges',
     targetProperty: 'Hotel Butik, Heritage Hotel & City Stay (10 - 50 Kamar)',
     badge: 'Boutique Hotel',
     description: 'Sistem manajemen front desk lengkap tanpa biaya langganan membengkak. Kendalikan kamar, night audit, dan pengalaman tamu secara profesional.',
@@ -146,22 +154,8 @@ export const industrySolutions: IndustrySolution[] = [
     ]
   },
   {
-    id: 'luxury-villas',
-    name: 'Private Villas & Vacation Rentals',
-    targetProperty: 'Luxury Villa, Kompleks Villa Sewa Harian & Airbnb Host',
-    badge: 'Private Villas',
-    description: 'Maksimalkan margin profit villa Anda dengan memotong komisi OTA 15-20%. Dapatkan direct booking mandiri dengan kalender anti-overbooking.',
-    painPoints: 'Komisi OTA memotong hingga 20% margin dan resiko double booking antar platform kalender.',
-    recommendedFeatures: [
-      'High-Converting Direct Booking Engine & Payment Gateway',
-      'iCal Multi-Channel Sync 2-Arah (Airbnb, Agoda, Booking.com)',
-      'Automated WhatsApp Guest Concierge (Auto Check-in details)',
-      'Kalkulasi Dynamic Rates (Weekend, Low/High Season)'
-    ]
-  },
-  {
     id: 'glamping-resorts',
-    name: 'Glamping, Eco-Resorts & Outbound',
+    name: 'Glamping, Eco-Resorts & Retreats',
     targetProperty: 'Glamping Sites, Wellness Retreat, Cabin & Eco-Lodge',
     badge: 'Resort & Glamping',
     description: 'Sistem reservasi terpadu untuk penginapan alam terbuka dengan paket aktivitas outdoor, sewa perlengkapan, dan dining area.',
@@ -175,16 +169,16 @@ export const industrySolutions: IndustrySolution[] = [
   },
   {
     id: 'hotel-fnb-lounge',
-    name: 'Hotel F&B, Rooftop & Pool Clubs',
-    targetProperty: 'Restoran Hotel, Rooftop Lounge, Beach Club & Bar Tamu',
+    name: 'Beach Clubs, Rooftops & Hotel F&B',
+    targetProperty: 'Beach Club, Poolside Bar, Rooftop Lounge & Resto Hotel',
     badge: 'Hospitality F&B',
-    description: 'Sistem POS kasir dan reservasi meja yang terintegrasi langsung dengan nomor kamar tamu untuk kenyamanan *room-charge billing*.',
+    description: 'Sistem POS kasir dan reservasi daybed/meja yang terintegrasi langsung dengan nomor kamar tamu untuk kenyamanan *room-charge billing*.',
     painPoints: 'Tamu komplain saat checkout karena tagihan resto tidak tercatat rapi di resepsionis.',
     recommendedFeatures: [
       'Fast Touchscreen POS Kasir Bar & Dapur',
       'Fitur Charge to Room (Koneksi ke Nomor Kamar & Nama Tamu)',
       'Split Bill & Minimum Spend Manager Meja VIP',
-      'Manajemen Stok Bahan Makanan & Minuman Minibar'
+      'Manajemen Stok Botol Minuman & Shift Kasir'
     ]
   }
 ];

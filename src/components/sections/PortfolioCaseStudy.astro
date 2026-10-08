@@ -2,32 +2,40 @@
 import { portfolioData, portfolioLinks } from '../../data/content';
 ---
 
-<section id="portofolio" class="py-20 md:py-28 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-semibold mb-3">
-        <span>Rekayasa Teruji & Siap Pakai</span>
+<section id="portofolio" class="py-24 md:py-32 relative overflow-hidden">
+  <!-- Subtle Ambient Glow -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold tracking-wide mb-4 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>PROVEN HOSPITALITY ARCHITECTURE</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Studi Kasus & Arsitektur Sistem Properti
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Studi Kasus & Ekosistem Properti Nyata
       </h2>
-      <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Jelajahi portofolio solusi hospitality yang kami rancang — mulai dari Direct Booking Engine villa mewah, Cloud PMS resort terintegrasi housekeeping, hingga sistem kasir lounge hotel.
+      <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+        Jelajahi portofolio solusi hospitality yang kami rekayasa — dari Direct Booking Engine villa mewah, Cloud PMS front desk, hingga sistem kasir beach club & reservasi glamping.
       </p>
     </div>
 
     <!-- Portfolio Cards Stack -->
-    <div class="space-y-12">
-      {portfolioData.map((item) => (
-        <div class="rounded-3xl bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-[#0B0F19] border border-slate-200 dark:border-slate-800 p-8 lg:p-12 shadow-xl dark:shadow-2xl relative overflow-hidden transition-colors duration-300">
-          <!-- Ambient Glow -->
-          <div class="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="space-y-12 lg:space-y-16">
+      {portfolioData.map((item, idx) => (
+        <div class="group rounded-3xl bg-white dark:bg-[#0B0F19]/90 border border-slate-200 dark:border-slate-800/80 p-7 sm:p-10 lg:p-12 shadow-xl dark:shadow-2xl hover:border-emerald-500/40 dark:hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden backdrop-blur-sm">
+          
+          <!-- Top Card Glow -->
+          <div class="absolute -right-24 -top-24 w-80 h-80 bg-gradient-to-br from-emerald-500/10 to-cyan-500/5 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
+            
             <!-- Left Info (7 cols) -->
             <div class="lg:col-span-7 space-y-6">
-              <div class="flex flex-wrap items-center gap-3">
-                <span class="px-3 py-1 text-xs font-bold bg-emerald-100 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 rounded-lg">
+              
+              <!-- Badges Row -->
+              <div class="flex flex-wrap items-center gap-2.5">
+                <span class="px-3 py-1 text-xs font-extrabold bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 rounded-lg tracking-wide">
                   {item.category}
                 </span>
 
@@ -36,142 +44,97 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                 </span>
 
                 {item.isInteractiveDemo && (
-                  <span class="flex items-center gap-1.5 text-xs font-bold text-cyan-700 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-300 dark:border-cyan-500/40 px-3 py-1 rounded-lg">
-                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-ping"></span>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-800 dark:text-cyan-300 bg-cyan-100 dark:bg-cyan-950/80 border border-cyan-300 dark:border-cyan-500/40 px-3 py-1 rounded-lg animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
                     Live Interactive Demo
                   </span>
                 )}
               </div>
 
+              <!-- Title & Client -->
               <div>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                   {item.title}
                 </h3>
-                <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 dark:text-slate-400 mt-1">
-                  Klien / Ekosistem: <strong class="text-emerald-600 dark:text-emerald-400">{item.client}</strong>
+                <p class="text-xs uppercase tracking-wider font-semibold text-slate-500 dark:text-slate-400 mt-1.5">
+                  Properti: <strong class="text-emerald-600 dark:text-emerald-400 font-bold">{item.client}</strong>
                 </p>
-                <p class="mt-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
               <!-- Impact Highlight Box -->
-              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
-                <p class="text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400">Dampak & Manfaat Nyata:</p>
-                <p class="text-sm font-semibold text-emerald-700 dark:text-emerald-300 mt-1">"{item.impact}"</p>
+              <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50/70 to-teal-50/40 dark:from-emerald-950/30 dark:to-teal-950/20 border border-emerald-200/80 dark:border-emerald-500/20">
+                <p class="text-[11px] uppercase tracking-widest font-extrabold text-emerald-700 dark:text-emerald-400">Dampak Finansial & Operasional:</p>
+                <p class="text-sm sm:text-base font-bold text-slate-900 dark:text-emerald-200 mt-1 leading-snug">
+                  "{item.impact}"
+                </p>
               </div>
 
-              <!-- Features List -->
+              <!-- Features Grid -->
               <div>
-                <p class="text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-3">Fitur Utama Sistem:</p>
+                <p class="text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-3">Modul Rekayasa Utama:</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {item.features.map((feat) => (
-                    <div class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                      <svg class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>{feat}</span>
+                    <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                      <div class="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="leading-relaxed">{feat}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <!-- Action Buttons -->
-              <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                {item.id === 'coffee-stand-pos' && (
-                  <>
-                    <a
-                      href="https://coffee-stand-demo.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group"
-                    >
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Coba Live Demo POS Lounge</span>
-                      <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </a>
-
-                    <a
-                      href="#request-builder"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
-                    >
-                      <span>Ajukan Custom POS Resto/Bar</span>
-                    </a>
-                  </>
-                )}
-
-                {item.id === 'pelangi-efrata-supply' && (
-                  <>
-                    <a
-                      href={portfolioLinks.pelangiWebLiveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all group"
-                    >
-                      <span>Kunjungi Website CV Pelangi Efrata</span>
-                      <svg class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-
-                    <a
-                      href="#request-builder"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
-                    >
-                      <span>Konsultasi Sistem Suplai Logistik</span>
-                    </a>
-                  </>
-                )}
-
+              <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 {item.id === 'aura-haven-villa-pms' && (
                   <>
                     <a
-                      href="https://cute-liger-eb138a.netlify.app/"
+                      href={item.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group"
+                      class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn"
                     >
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>Buka Live Demo Aura Haven Villa Direct</span>
-                      <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
 
                     <a
                       href="#request-builder"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
+                      class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
                     >
-                      <span>Ajukan Direct Booking Engine Villa Anda</span>
+                      <span>Ajukan Direct Booking untuk Villa Anda</span>
                     </a>
                   </>
                 )}
 
-                {item.id === 'lumina-resort-pms-concierge' && (
+                {item.id !== 'aura-haven-villa-pms' && (
                   <>
                     <a
                       href="#request-builder"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group"
+                      class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all group/btn"
                     >
-                      <span>Ajukan Sistem Cloud PMS Serupa</span>
-                      <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span>Ajukan Sistem untuk Properti Anda</span>
+                      <svg class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
 
                     <a
-                      href="https://wa.me/6282322370126?text=Halo%20Tim%20Veridion,%20saya%20tertarik%20dengan%20sistem%20Lumina%20Eco%20Resort%20PMS" 
+                      href={`https://wa.me/6282322370126?text=Halo%20Tim%20Veridion,%20saya%20tertarik%20dengan%20sistem%20${encodeURIComponent(item.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
+                      class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs border border-slate-300 dark:border-slate-700 transition-all"
                     >
                       <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.45 0.742.966 1.201.664.591 1.224.774 1.397.86.173.086.274.072.375-.044.101-.116.433-.505.549-.679.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z" />
@@ -180,19 +143,6 @@ import { portfolioData, portfolioLinks } from '../../data/content';
                     </a>
                   </>
                 )}
-              </div>
-
-              <!-- Notice Box -->
-              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-xs space-y-1.5">
-                <div class="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold">
-                  <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  <span>Status Sistem: {item.activeStatus}</span>
-                </div>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Semua arsitektur di atas dibangun dengan standar modular (Tailwind, Astro/Next.js, Node/Serverless) sehingga dapat langsung diadaptasi dengan brand identity, foto, dan struktur tarif properti Anda.
-                </p>
               </div>
 
               <!-- Tags -->
@@ -205,37 +155,32 @@ import { portfolioData, portfolioLinks } from '../../data/content';
               </div>
             </div>
 
-            <!-- Right Metrics & Architecture (5 cols) -->
-            <div class="lg:col-span-5 flex flex-col gap-6">
-              <div class="grid grid-cols-1 gap-4">
+            <!-- Right Metrics Column (5 cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+              <div class="grid grid-cols-1 gap-3.5">
                 {item.metrics.map((metric) => (
-                  <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 transition-colors shadow-sm">
-                    <p class="text-xs text-slate-500 dark:text-slate-400">{metric.label}</p>
-                    <p class="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400 mt-1">
+                  <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 transition-colors shadow-sm">
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">{metric.label}</p>
+                    <p class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-400 mt-1">
                       {metric.value}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <!-- Highlight Card -->
-              <div class="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/20 shadow-sm">
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div class="space-y-1">
-                    <p class="text-sm font-bold text-slate-900 dark:text-white">Implementasi Langsung Tanpa Agen Pihak Ketiga</p>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                      Sistem terhubung langsung ke domain resmi properti Anda, dengan hak milik 100% atas data riwayat tamu untuk strategi direct booking berikutnya.
-                    </p>
-                  </div>
+              <!-- Status Box -->
+              <div class="p-5 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 shadow-sm space-y-2">
+                <div class="flex items-center gap-2 text-xs font-bold text-emerald-700 dark:text-emerald-400">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span>{item.activeStatus}</span>
                 </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Arsitektur modular siap dikonfigurasi dengan logo, warna tema, foto kamar, dan aturan pemesanan khusus properti Anda.
+                </p>
               </div>
 
             </div>
+
           </div>
         </div>
       ))}

@@ -22,8 +22,8 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
 3. **Portofolio & Studi Kasus Hospitality Terpercaya**:
    - **Aura Haven Luxury Villas**: Direct Booking Engine & Multi-Channel PMS dengan iCal sync 2-arah, kalkulator tarif musiman, dan WhatsApp concierge ([Live Demo Booking Hub](https://cute-liger-eb138a.netlify.app/)).
    - **Lumina Eco-Resort & Suites**: Cloud PMS Front Desk, Housekeeping mobile updater, dan QR Room Service tertaut langsung ke Folio Tagihan Kamar.
-   - **Hotel Lounge & Stand Barista POS**: Live interactive touch POS demo untuk outlet F&B/Lounge hotel dengan QRIS dan cetak struk thermal 58mm ([Live Demo Hub](https://coffee-stand-demo.netlify.app/)).
-   - **CV Pelangi Efrata**: Sistem supply chain logistik & distribusi amenities hotel operasional nyata ([Live Web Portal](https://euphonious-liger-9f90e3.netlify.app/)).
+   - **Samudera Beach Club & Lounge**: Hospitality POS touch-friendly dengan VIP daybed reservation, minimum spend manager, dan fitur *Charge to Room Folio*.
+   - **Nirvana Glamping & Adventure**: Experiential booking engine dengan paket aktivitas outdoor terpadu, slot scheduler, dan deposit otomatis.
 
 4. **Standar Rekayasa & Kepatuhan Software Properti**:
    - **Zero OTA Commission**: Pembayaran tamu 100% langsung masuk ke rekening bank pemilik properti via Midtrans / Xendit.
