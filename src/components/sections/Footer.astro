@@ -17,11 +17,13 @@ const nav = ui[lang].nav;
       <!-- Brand & Bio -->
       <div class="md:col-span-2 space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 p-0.5">
-            <div class="w-full h-full bg-white dark:bg-[#070A12] rounded-[10px] flex items-center justify-center font-bold text-emerald-500 dark:text-emerald-400 text-sm">
-              V
-            </div>
-          </div>
+          <img
+            src="/brand/veridion-logo-mark.svg"
+            alt="Veridion Studio Logo"
+            width="36"
+            height="36"
+            class="w-9 h-9 rounded-xl shadow-md shadow-emerald-500/20 shrink-0"
+          />
           <span class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
             Veridion <span class="text-emerald-600 dark:text-emerald-400">Studio</span>
           </span>
@@ -44,6 +46,7 @@ const nav = ui[lang].nav;
           <li><a href="#arsitektur-teknologi" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{nav.standar}</a></li>
           <li><a href="#early-partner" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{nav.pilot} ({nav.pilotBadge})</a></li>
           <li><a href="#request-builder" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{nav.rancang}</a></li>
+          <li class="pt-2"><a href="/brand" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline flex items-center gap-1.5"><span>Brand Kit &amp; Logo Assets</span><span class="text-xs font-mono">↓</span></a></li>
         </ul>
       </div>
 

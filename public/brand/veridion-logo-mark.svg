@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="v_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#070A12"/>
+      <stop offset="100%" stop-color="#030509"/>
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="v_border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Left Wing Gradient (Emerald to Mint) -->
+    <linearGradient id="v_wing_left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Right Wing Gradient (Teal to Cyan) -->
+    <linearGradient id="v_wing_right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+
+    <!-- Center Apex Gem Gradient (Hospitality Star / Key) -->
+    <linearGradient id="v_apex_gem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A7F3D0"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="v_glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="v_shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Base Squircle with Glowing Border -->
+  <rect x="20" y="20" width="472" height="472" rx="118" fill="url(#v_bg)"/>
+  <rect x="20" y="20" width="472" height="472" rx="118" stroke="url(#v_border)" stroke-width="4"/>
+
+  <!-- Ambient Light Reflection Behind Logo -->
+  <circle cx="256" cy="220" r="160" fill="#10B981" opacity="0.12" filter="url(#v_glow)"/>
+
+  <!-- Left Architectural Facet (V Wing Left) -->
+  <path d="M 124 148 C 124 140 131 134 139 134 L 195 134 C 203 134 210 139 214 146 L 256 314 L 218 368 C 213 375 204 378 196 374 L 176 364 C 172 362 168 358 166 354 L 126 156 C 125 153 124 150 124 148 Z" fill="url(#v_wing_left)" filter="url(#v_shadow)"/>
+
+  <!-- Right Architectural Facet (V Wing Right) -->
+  <path d="M 388 148 C 388 140 381 134 373 134 L 317 134 C 309 134 302 139 298 146 L 256 314 L 294 368 C 299 375 308 378 316 374 L 336 364 C 340 362 344 358 346 354 L 386 156 C 387 153 388 150 388 148 Z" fill="url(#v_wing_right)" filter="url(#v_shadow)"/>
+
+  <!-- Convergence V Point -->
+  <path d="M 218 368 L 256 314 L 294 368 L 256 414 Z" fill="url(#v_wing_left)"/>
+
+  <!-- Hospitality Apex Star / Villa Roof Key Crest -->
+  <path d="M 256 128 L 294 184 L 256 240 L 218 184 Z" fill="url(#v_apex_gem)" filter="url(#v_shadow)"/>
+  
+  <!-- Subtle Internal Highlight Facet -->
+  <path d="M 256 128 L 294 184 L 256 240 Z" fill="#FFFFFF" opacity="0.25"/>
+
+  <!-- Center Core Node / Key Pivot -->
+  <circle cx="256" cy="184" r="7" fill="#FFFFFF" filter="drop-shadow(0 0 6px #6EE7B7)"/>
+</svg>

@@ -48,6 +48,15 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    - Eliminasi text-wrapping horizontal pada layar desktop (`whitespace-nowrap`, compact spacing, dan single-line alignment).
    - Mobile drawer modern bergaya *native app* dengan backdrop blur, icon visual interaktif untuk setiap kategori sistem properti, tombol switcher bahasa yang mudah dijangkau, dan *Direct Tech Lead WhatsApp Action*.
 
+8. **Identitas Visual & Brand Kit Logo Resmi**:
+   - Desain logo emblem geometris (*Architectural V-Monogram*) yang menggabungkan siluet atap villa tropis, bintang hospitality, dan sudut presisi rekayasa software.
+   - Tersedia lengkap di direktori `public/brand/` dan halaman unduhan `/brand`:
+     - `veridion-logo-mark.svg` (Square Squircle Badge)
+     - `veridion-logo-mark-transparent.svg` (Transparent Mark)
+     - `veridion-logo-horizontal.svg` (Dark Mode Horizontal Wordmark)
+     - `veridion-logo-horizontal-light.svg` (Light Mode Horizontal Wordmark)
+     - `favicon.svg` & `og-image.svg` terintegrasi.
+
 ---
 
 ## 🛠️ Tech Stack

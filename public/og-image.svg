@@ -46,26 +46,32 @@
   <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#1F2937" stroke-width="1.5" opacity="0.7"/>
 
   <!-- Brand Badge (Top Left) -->
-  <g transform="translate(90, 95)">
+  <g transform="translate(90, 85)">
     <!-- Logo Icon -->
-    <rect width="48" height="48" rx="14" fill="#111827" stroke="#10B981" stroke-width="2"/>
-    <text x="24" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" fill="#10B981" text-anchor="middle">V</text>
+    <rect width="56" height="56" rx="16" fill="#0B0F19" stroke="#10B981" stroke-width="2"/>
+    <g transform="translate(9, 7) scale(0.12)">
+      <path d="M 28 32 C 28 26 33 20 40 20 L 84 20 C 90 20 96 24 99 30 L 146 166 L 114 212 C 110 218 102 220 96 217 L 76 207 C 72 205 69 202 67 198 L 30 38 C 29 36 28 34 28 32 Z" fill="#10B981"/>
+      <path d="M 264 32 C 264 26 259 20 252 20 L 208 20 C 202 20 196 24 193 30 L 146 166 L 178 212 C 182 218 190 220 196 217 L 216 207 C 220 205 223 202 225 198 L 262 38 C 263 36 264 34 264 32 Z" fill="#06B6D4"/>
+      <path d="M 114 212 L 146 166 L 178 212 L 146 252 Z" fill="#10B981"/>
+      <path d="M 146 16 L 180 62 L 146 108 L 112 62 Z" fill="#6EE7B7"/>
+      <circle cx="146" cy="62" r="10" fill="#FFFFFF"/>
+    </g>
     
     <!-- Studio Name -->
-    <text x="64" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">
+    <text x="72" y="30" font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF">
       Veridion <tspan fill="#10B981">Studio</tspan>
     </text>
-    <text x="64" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">
-      INDEPENDENT TECH STUDIO
+    <text x="72" y="49" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">
+      HOSPITALITY TECH STUDIO
     </text>
   </g>
 
   <!-- Special Program Tag (Top Right) -->
-  <g transform="translate(810, 95)">
-    <rect width="300" height="44" rx="22" fill="#022C22" stroke="#10B981" stroke-width="1.5"/>
-    <circle cx="24" cy="22" r="6" fill="#10B981"/>
-    <text x="40" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">
-      EARLY PARTNER: 3 SLOT GRATIS
+  <g transform="translate(800, 90)">
+    <rect width="310" height="46" rx="23" fill="#022C22" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="24" cy="23" r="6" fill="#10B981"/>
+    <text x="42" y="28" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">
+      PILOT PROGRAM: 2 SLOT GRATIS (S&amp;K)
     </text>
   </g>
 

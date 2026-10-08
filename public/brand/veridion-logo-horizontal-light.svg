@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 160" width="680" height="160" fill="none">
+  <defs>
+    <!-- Left Wing Gradient -->
+    <linearGradient id="vhl_wing_left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Right Wing Gradient -->
+    <linearGradient id="vhl_wing_right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+
+    <!-- Wordmark Gradient -->
+    <linearGradient id="vhl_text_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <filter id="vhl_shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Left Emblem -->
+  <g transform="translate(15, 12) scale(0.52)">
+    <rect x="0" y="0" width="260" height="260" rx="64" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="3"/>
+    <g transform="translate(10, 8) scale(0.75)">
+      <!-- Left Wing -->
+      <path d="M 28 32 C 28 26 33 20 40 20 L 84 20 C 90 20 96 24 99 30 L 146 166 L 114 212 C 110 218 102 220 96 217 L 76 207 C 72 205 69 202 67 198 L 30 38 C 29 36 28 34 28 32 Z" fill="url(#vhl_wing_left)" filter="url(#vhl_shadow)"/>
+      <!-- Right Wing -->
+      <path d="M 264 32 C 264 26 259 20 252 20 L 208 20 C 202 20 196 24 193 30 L 146 166 L 178 212 C 182 218 190 220 196 217 L 216 207 C 220 205 223 202 225 198 L 262 38 C 263 36 264 34 264 32 Z" fill="url(#vhl_wing_right)" filter="url(#vhl_shadow)"/>
+      <!-- V Convergence -->
+      <path d="M 114 212 L 146 166 L 178 212 L 146 252 Z" fill="url(#vhl_wing_left)"/>
+      <!-- Apex Gem -->
+      <path d="M 146 16 L 180 62 L 146 108 L 112 62 Z" fill="#10B981" filter="url(#vhl_shadow)"/>
+      <circle cx="146" cy="62" r="6" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- Typography Right -->
+  <g transform="translate(175, 42)">
+    <!-- Primary Brand Wordmark -->
+    <text x="0" y="44" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.2">
+      <tspan fill="#0F172A">Veridion </tspan>
+      <tspan fill="url(#vhl_text_grad)">Studio</tspan>
+    </text>
+
+    <!-- Subtitle Category Badge -->
+    <text x="2" y="74" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#64748B" letter-spacing="3.2">
+      HOSPITALITY TECH STUDIO
+    </text>
+
+    <!-- Accent Micro-Line -->
+    <rect x="2" y="86" width="320" height="2" rx="1" fill="url(#vhl_text_grad)" opacity="0.6"/>
+  </g>
+</svg>
