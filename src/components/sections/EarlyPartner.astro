@@ -2,11 +2,11 @@
 import { earlyPartnerProgram, pilotTerms } from '../../data/content';
 ---
 
-<section id="early-partner" class="py-20 md:py-28 relative bg-gradient-to-b from-slate-100 via-emerald-50/50 to-slate-100 dark:from-[#0B0F19] dark:via-emerald-950/20 dark:to-[#0B0F19] border-y border-emerald-500/20 dark:border-emerald-900/30 overflow-hidden transition-colors duration-300">
+<section id="early-partner" class="py-24 md:py-32 relative bg-gradient-to-b from-slate-100 via-emerald-50/40 to-slate-100 dark:from-[#070A12] dark:via-emerald-950/20 dark:to-[#070A12] border-y border-emerald-500/20 overflow-hidden transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="rounded-3xl border border-emerald-500/30 bg-white/90 dark:bg-slate-900/90 p-8 sm:p-12 lg:p-16 relative shadow-2xl backdrop-blur-xl">
+    <div class="rounded-3xl border border-emerald-500/30 bg-white/95 dark:bg-slate-900/90 p-8 sm:p-12 lg:p-16 relative shadow-2xl backdrop-blur-xl">
       
-      <!-- Glow Decor -->
+      <!-- Ambient Glow Decor -->
       <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Top Row: Overview & Slots -->
@@ -15,18 +15,18 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-wide">
             <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping"></span>
-            <span>PROGRAM KEMITRAAN PILOT HOSPITALITY</span>
+            <span>PROGRAM KEMITRAAN PILOT (S&K BERLAKU)</span>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
-            Gratis Biaya Development untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400">3 Properti Pertama</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">
+            Gratis Biaya Development untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400">2 Properti Pertama</span>
           </h2>
 
           <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-            Sebagai komitmen kami memperkenalkan standar rekayasa software hospitality modern, kami membuka kesempatan kemitraan percontohan. Kami bangunkan Direct Booking Engine atau Custom PMS properti Anda tanpa biaya pengerjaan.
+            Sebagai langkah memperkuat rekam jejak dan kredibilitas Veridion Studio di industri hospitality, kami membuka kemitraan percontohan. Kami bangunkan Direct Booking Engine atau Custom PMS properti Anda tanpa biaya pengerjaan (100% Free Development Fee) dengan skema timbal balik penguatan reputasi.
           </p>
 
-          <!-- Benefits & Terms -->
+          <!-- Benefits & Terms Highlights -->
           <div class="space-y-3 pt-2">
             {earlyPartnerProgram.conditions.map((cond) => (
               <div class="flex items-start gap-3">
@@ -35,7 +35,7 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p class="text-sm text-slate-700 dark:text-slate-200">{cond}</p>
+                <p class="text-sm font-medium text-slate-700 dark:text-slate-200 leading-relaxed">{cond}</p>
               </div>
             ))}
           </div>
@@ -45,7 +45,7 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
               href="#request-builder"
               class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-bold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
-              <span>Ajukan Properti & Klaim Slot Gratis</span>
+              <span>Ajukan Properti & Klaim Slot Pilot</span>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -57,35 +57,39 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
         <div class="lg:col-span-5">
           <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
             <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
-              <span class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">Status Kuota Terbuka</span>
+              <span class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">Status Kuota Terbuka</span>
               <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30">
                 Pendaftaran Dibuka
               </span>
             </div>
 
-            <!-- Visual Slot Boxes -->
+            <!-- Visual Slot Boxes (2 Slots) -->
             <div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Tersedia <strong class="text-slate-900 dark:text-white">3 dari 3 Kuota</strong> Properti Percontohan:</p>
-              <div class="grid grid-cols-3 gap-3">
-                <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/50 text-center">
-                  <span class="block text-xs font-bold text-emerald-700 dark:text-emerald-400">Slot 1</span>
-                  <span class="text-[11px] text-emerald-800 dark:text-emerald-200 font-medium">TERSEDIA</span>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Tersedia <strong class="text-slate-900 dark:text-white font-bold">2 dari 2 Kuota</strong> Properti Percontohan:</p>
+              <div class="grid grid-cols-2 gap-3.5">
+                <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/50 text-center space-y-1">
+                  <span class="block text-xs font-black text-emerald-700 dark:text-emerald-400">SLOT 1</span>
+                  <span class="inline-block px-2 py-0.5 text-[10px] bg-emerald-200/60 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold rounded-full">TERSEDIA</span>
+                  <p class="text-[10px] text-slate-500 dark:text-slate-400 pt-1">Boutique Hotel / Villa</p>
                 </div>
-                <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/50 text-center">
-                  <span class="block text-xs font-bold text-emerald-700 dark:text-emerald-400">Slot 2</span>
-                  <span class="text-[11px] text-emerald-800 dark:text-emerald-200 font-medium">TERSEDIA</span>
-                </div>
-                <div class="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/50 text-center">
-                  <span class="block text-xs font-bold text-emerald-700 dark:text-emerald-400">Slot 3</span>
-                  <span class="text-[11px] text-emerald-800 dark:text-emerald-200 font-medium">TERSEDIA</span>
+                <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/50 text-center space-y-1">
+                  <span class="block text-xs font-black text-emerald-700 dark:text-emerald-400">SLOT 2</span>
+                  <span class="inline-block px-2 py-0.5 text-[10px] bg-emerald-200/60 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-extrabold rounded-full">TERSEDIA</span>
+                  <p class="text-[10px] text-slate-500 dark:text-slate-400 pt-1">Glamping / Resort</p>
                 </div>
               </div>
             </div>
 
-            <!-- Notice Info -->
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 text-xs text-slate-600 dark:text-slate-400 leading-relaxed shadow-sm">
+            <!-- Mutual Credibility Rationale -->
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 text-xs text-slate-600 dark:text-slate-300 leading-relaxed shadow-sm space-y-2">
+              <p class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Mengapa Skema Ini Gratis?</span>
+              </p>
               <p>
-                <strong class="text-slate-800 dark:text-slate-200">Kenapa Gratis?</strong> Kami ingin membuktikan secara riil bagaimana direct booking memotong komisi OTA dan melipatgandakan margin villa/hotel Anda, sembari menjalin kemitraan jangka panjang.
+                Kami menginvestasikan waktu dan rekayasa kode bernilai puluhan juta rupiah secara gratis, dengan timbal balik kesediaan Anda memberikan feedback jujur dan izin publikasi studi kasus untuk mendongkrak kredibilitas Veridion Studio di hadapan klien-klien berikutnya.
               </p>
             </div>
           </div>
@@ -93,28 +97,28 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
       </div>
 
       <!-- Bottom Row: Transparent Terms & Scope -->
-      <div class="mt-14 pt-10 border-t border-slate-200 dark:border-slate-800">
-        <div class="text-center max-w-2xl mx-auto mb-8">
-          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+      <div class="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {pilotTerms.title}
           </h3>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
             {pilotTerms.subtitle}
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
           <!-- Col 1: Covered for Free -->
-          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
             <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider text-[11px]">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
               </svg>
               <span>Yang Dikerjakan Gratis (100% Free):</span>
             </div>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+            <ul class="space-y-2.5 text-slate-600 dark:text-slate-300">
               {pilotTerms.covered.map((item) => (
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 leading-relaxed">
                   <span class="text-emerald-500 font-bold">✓</span>
                   <span>{item}</span>
                 </li>
@@ -122,18 +126,18 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
             </ul>
           </div>
 
-          <!-- Col 2: Client Commitment -->
-          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
-            <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 font-bold uppercase tracking-wider text-[11px]">
+          <!-- Col 2: Client Commitment (Feedback & Kredibilitas) -->
+          <div class="p-6 rounded-2xl bg-gradient-to-b from-cyan-50/50 to-white dark:from-cyan-950/20 dark:to-slate-950 border border-cyan-200 dark:border-cyan-500/30 shadow-sm space-y-4">
+            <div class="flex items-center gap-2 text-cyan-700 dark:text-cyan-400 font-bold uppercase tracking-wider text-[11px]">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              <span>Komitmen Timbal Balik Properti:</span>
+              <span>Komitmen Timbal Balik Properti (S&K):</span>
             </div>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+            <ul class="space-y-2.5 text-slate-700 dark:text-slate-200 font-medium">
               {pilotTerms.clientCommitment.map((item) => (
-                <li class="flex items-start gap-2">
-                  <span class="text-cyan-500 font-bold">•</span>
+                <li class="flex items-start gap-2 leading-relaxed">
+                  <span class="text-cyan-600 dark:text-cyan-400 font-bold mt-0.5">•</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -141,16 +145,16 @@ import { earlyPartnerProgram, pilotTerms } from '../../data/content';
           </div>
 
           <!-- Col 3: Not Covered / Out of Scope -->
-          <div class="p-5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
             <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
               <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>Di Luar Tanggungan Program:</span>
             </div>
-            <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+            <ul class="space-y-2.5 text-slate-600 dark:text-slate-300">
               {pilotTerms.notCovered.map((item) => (
-                <li class="flex items-start gap-2">
+                <li class="flex items-start gap-2 leading-relaxed">
                   <span class="text-slate-400 font-bold">-</span>
                   <span>{item}</span>
                 </li>

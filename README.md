@@ -33,9 +33,10 @@ Dibangun dengan arsitektur **Jamstack Statis (Astro + Tailwind CSS v4)** yang be
    - **Room Folio Billing & Night Audit**: Rekapitulasi tagihan minibar/resto ke kamar dan laporan pajak daerah PB1 (10%).
    - **Direct CRM Database**: Kepemilikan penuh nomor WA & data histori tamu untuk repeat booking.
 
-5. **Hospitality Pilot Program (Gratis Biaya Development untuk 3 Properti Pertama)**:
-   - Program kemitraan percontohan tanpa biaya jasa pengerjaan (*free development fee*) untuk 3 villa/hotel aktif pertama.
-   - Dilengkapi *Live Slot Tracker* (3/3 kuota tersedia).
+5. **Hospitality Pilot Program (Gratis Biaya Development untuk 2 Properti Pertama — S&K Berlaku)**:
+   - Program kemitraan percontohan tanpa biaya jasa pengerjaan (*free development fee*) untuk 2 villa/hotel aktif pertama.
+   - Skema timbal balik penguatan kredibilitas: ulasan testimoni resmi tertulis/video, hak publikasi studi kasus, data metrik performa nyata, dan 1 sesi feedback produk.
+   - Dilengkapi *Live Slot Tracker* (2/2 kuota tersedia).
 
 6. **Interactive Property Spec Builder**:
    - Memandu calon klien memilih tipe properti, jumlah unit, solusi utama, dan modul spesifik.

@@ -217,38 +217,39 @@ export const hospitalityTechStandards = [
 ];
 
 export const earlyPartnerProgram = {
-  totalSlots: 3,
-  availableSlots: 3,
-  badgeText: 'Program Kemitraan Hospitality',
-  title: 'Hospitality Pilot Program: Gratis Biaya Development untuk 3 Properti Pertama',
-  description: 'Khusus untuk 3 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Guest House) yang siap mendongkrak direct booking dan merapikan operasional propertinya. Kami bangunkan Direct Booking Engine atau Custom PMS tanpa biaya jasa pembuatan.',
+  totalSlots: 2,
+  availableSlots: 2,
+  badgeText: 'Program Kemitraan Hospitality (S&K Berlaku)',
+  title: 'Hospitality Pilot Program: Gratis Biaya Development untuk 2 Properti Pertama',
+  description: 'Khusus untuk 2 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Resort) yang siap mendongkrak direct booking dan merapikan sistem propertinya. Kami bangunkan Direct Booking Engine atau Custom PMS tanpa biaya jasa pembuatan (100% Free Development Fee) dengan skema timbal balik penguatan kredibilitas.',
   conditions: [
     'Gratis 100% Development Fee (Biaya Pembuatan Sistem / Web Booking Kustom)',
-    'Klien hanya menanggung domain resmi properti & akun payment gateway sendiri (semua dana tamu masuk ke rekening Anda)',
-    'Sebagai timbal balik, pemilik properti bersedia memberikan feedback dan menjadi studi kasus resmi Veridion Studio',
-    'Prioritas utama diberikan kepada properti yang sudah aktif beroperasi atau siap opening dalam 1-2 bulan'
+    'Klien hanya menanggung domain resmi properti & akun payment gateway sendiri (semua dana tamu masuk langsung ke rekening Anda)',
+    'Syarat & Ketentuan Berlaku: Timbal balik berupa feedback resmi, video/ulasan testimoni, dan izin studi kasus untuk mengangkat reputasi layanan Veridion Studio',
+    'Prioritas utama diberikan kepada properti yang sudah aktif beroperasi atau siap opening dalam 1-2 bulan ke depan'
   ]
 };
 
 export const pilotTerms = {
-  title: 'Ketentuan & Transparansi Program Pilot Hospitality',
-  subtitle: 'Standar Profesional untuk Kemitraan Properti Jangka Panjang',
+  title: 'Syarat & Ketentuan Program Kemitraan (Mutual Credibility Terms)',
+  subtitle: 'Kolaborasi Simbiosis Mutualisme: Sistem Kelas Atas Gratis Ditukar Penguatan Kredibilitas Layanan',
   covered: [
     '1 Unit Sistem Inti Properti (Pilihan: Direct Booking Engine + Payment ATAU Cloud PMS Front Desk & Housekeeping)',
-    'Setup master data kamar/villa, foto, tipe tempat tidur, fasilitas, dan konfigurasi harga musiman',
-    'Pelatihan staf resepsionis dan front desk hingga mandiri mengoperasikan sistem',
-    'Garansi pendampingan operasional & perbaikan bug selama 30 hari pasca go-live'
+    'Setup master data kamar/villa, galeri foto, tipe tempat tidur, fasilitas, dan konfigurasi harga musiman',
+    'Pelatihan staf resepsionis dan front desk hingga mandiri mengoperasikan sistem tanpa kendala',
+    'Garansi pendampingan operasional & perbaikan bug selama 30 hari penuh pasca go-live'
   ],
   clientCommitment: [
-    'Menyediakan data properti (foto berkualitas, deskripsi tipe kamar, dan aturan check-in/out) secara kooperatif',
-    'Menguji coba dan menggunakan sistem secara aktif dalam reservasi tamu sebenarnya',
-    'Bersedia memberikan ulasan testimoni atau video singkat (30-45 detik) dari Owner atau General Manager (GM)',
-    'Memberikan izin pencantuman nama properti & logo sebagai portofolio resmi Veridion Studio'
+    'Memberikan Testimoni Resmi: Ulasan tertulis berbobot dan video singkat (30–60 detik) dari Owner atau General Manager mengenai kepuasan sistem',
+    'Hak Publikasi Studi Kasus: Izin pencantuman nama properti, logo, dan galeri foto sebagai showcase resmi di website & media promosi Veridion Studio',
+    'Berbagi Metrik Kinerja Nyata: Kesediaan membagikan ringkasan data efisiensi setelah 14–30 hari (misal: persentase kenaikan direct booking atau nominal komisi OTA yang dihemat)',
+    '1x Sesi Evaluasi Produk: Diskusi santai (30 menit) bersama lead developer untuk memberikan masukan UI/UX demi peningkatan kualitas sistem berikutnya',
+    'Komitmen Penggunaan Nyata: Berkomitmen mengoperasikan sistem secara aktif untuk reservasi tamu sebenarnya'
   ],
   notCovered: [
-    'Biaya langganan domain web kustom (cth: namavilla.com) atau akun payment gateway pihak ketiga',
+    'Biaya langganan domain web kustom (cth: namavilla.com) atau biaya MDR payment gateway pihak ketiga (Midtrans/Xendit)',
     'Pengadaan fisik hardware tambahan seperti tablet resepsionis atau printer kasir',
-    'Penambahan modul custom di luar kesepakatan awal (fitur lanjutan dapat didiskusikan secara bertahap)'
+    'Penambahan modul kustom di luar kesepakatan awal (fitur kompleks lanjutan dapat didiskusikan secara bertahap)'
   ]
 };
 
@@ -301,8 +302,8 @@ export const faqs = [
     a: 'Sebagai gambaran, jika properti Anda memiliki 10 unit kamar dengan tarif Rp 800.000/malam dan rata-rata okupansi 65%, perputaran omzet kotor berkisar Rp 156.000.000/bulan. Bila 70% tamu berasal dari OTA dengan komisi 18%, Anda membayar potongan komisi sekitar Rp 19.600.000 setiap bulan! Mengalihkan sebagian reservasi ke Direct Booking menghemat puluhan hingga ratusan juta rupiah per tahun.'
   },
   {
-    q: 'Apa saja syarat untuk mendapatkan slot 100% Gratis di Hospitality Pilot Program?',
-    a: 'Program ini dibuka khusus untuk 3 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Guesthouse) yang sudah beroperasi atau mendekati jadwal launching. Kami menggratiskan 100% biaya jasa development sistem, dengan timbal balik kesediaan menjadi portofolio dan studi kasus resmi Veridion Studio.'
+    q: 'Apa saja syarat dan ketentuan (S&K) untuk mendapatkan slot 100% Gratis di Hospitality Pilot Program?',
+    a: 'Program ini dibuka khusus untuk 2 pemilik properti (Boutique Hotel, Luxury Villa, Glamping, atau Resort) yang beroperasi aktif atau siap opening. Kami membebaskan 100% biaya jasa development, dengan komitmen timbal balik berupa: ulasan/video testimoni dari Owner/GM, hak publikasi studi kasus di web Veridion, kesediaan berbagi data dampak (metrik komisi yang dihemat/kenaikan booking), serta 1 sesi feedback produk.'
   },
   {
     q: 'Apakah kami harus membeli server atau perangkat komputer kasir hotel yang mahal?',
